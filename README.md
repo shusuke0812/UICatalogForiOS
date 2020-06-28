@@ -7,5 +7,5 @@ UIKitによるUIのライブラリ集
 - MacOS Catalina version 10.15.4
 
 ## 参考文献
-- [](https://)
+- 上部タブのページ切替：[XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)  
 
