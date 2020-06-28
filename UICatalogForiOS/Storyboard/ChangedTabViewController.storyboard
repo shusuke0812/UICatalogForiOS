@@ -14,13 +14,45 @@
                     <view key="view" contentMode="scaleToFill" id="ezj-Kk-RCa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="png-Ng-1Rr">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IiE-Vz-HmD"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qAq-n3-sYT"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-Sx-AoR" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="24l-KO-6yd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XQz-5S-8bq">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="top" secondItem="ezj-Kk-RCa" secondAttribute="top" constant="44" id="6DD-u6-1ws"/>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="top" secondItem="fuc-p3-S8J" secondAttribute="top" id="kI8-xn-h8Y"/>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="unW-uf-Kal"/>
+                            <constraint firstItem="fuc-p3-S8J" firstAttribute="trailing" secondItem="iy3-Sx-AoR" secondAttribute="trailing" id="vBt-80-9Av"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fuc-p3-S8J"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="png-Ng-1Rr" id="wMO-Uc-kZw"/>
+                        <outlet property="scrollView" destination="png-Ng-1Rr" id="JRc-de-bL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4g-Ox-r0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="-33"/>
+            <point key="canvasLocation" x="450.72463768115944" y="-33.482142857142854"/>
         </scene>
     </scenes>
 </document>
