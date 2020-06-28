@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306694AEFC47862F54163E4F /* Pods_UICatalogForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464D5D6401823741BD93310 /* Pods_UICatalogForiOS.framework */; };
 		9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B82B24A879FA00658EA3 /* AppDelegate.swift */; };
 		9C21B82E24A879FA00658EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B82D24A879FA00658EA3 /* SceneDelegate.swift */; };
 		9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B82F24A879FA00658EA3 /* BaseViewController.swift */; };
@@ -15,9 +16,16 @@
 		9C21B83824A879FE00658EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B83624A879FE00658EA3 /* LaunchScreen.storyboard */; };
 		9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */; };
 		9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84324A883E800658EA3 /* ChangedTabViewController.storyboard */; };
+		9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */; };
+		9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */; };
+		9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */; };
+		9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		066D05F15D64CF7AF281F164 /* Pods-UICatalogForiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalogForiOS.debug.xcconfig"; path = "Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2464D5D6401823741BD93310 /* Pods_UICatalogForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICatalogForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37037662F05A248BEB1FBBF9 /* Pods-UICatalogForiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalogForiOS.release.xcconfig"; path = "Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS.release.xcconfig"; sourceTree = "<group>"; };
 		9C21B82824A879FA00658EA3 /* UICatalogForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalogForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C21B82B24A879FA00658EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C21B82D24A879FA00658EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +36,10 @@
 		9C21B83924A879FE00658EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedTabViewController.swift; sourceTree = "<group>"; };
 		9C21B84324A883E800658EA3 /* ChangedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedTabViewController.storyboard; sourceTree = "<group>"; };
+		9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedFavoriteTabChildViewController.swift; sourceTree = "<group>"; };
+		9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedInfoTabChildViewController.swift; sourceTree = "<group>"; };
+		9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedFavoriteTabChildViewController.storyboard; sourceTree = "<group>"; };
+		9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedInfoTabChildViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306694AEFC47862F54163E4F /* Pods_UICatalogForiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29A1446C3903935C014E204A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2464D5D6401823741BD93310 /* Pods_UICatalogForiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C21B81F24A879FA00658EA3 = {
 			isa = PBXGroup;
 			children = (
 				9C21B82A24A879FA00658EA3 /* UICatalogForiOS */,
 				9C21B82924A879FA00658EA3 /* Products */,
+				BAFEEA42025ED95F13FCDDB6 /* Pods */,
+				29A1446C3903935C014E204A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */,
+				9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */,
+				9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -85,8 +110,19 @@
 			isa = PBXGroup;
 			children = (
 				9C21B84324A883E800658EA3 /* ChangedTabViewController.storyboard */,
+				9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */,
+				9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BAFEEA42025ED95F13FCDDB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				066D05F15D64CF7AF281F164 /* Pods-UICatalogForiOS.debug.xcconfig */,
+				37037662F05A248BEB1FBBF9 /* Pods-UICatalogForiOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C21B83C24A879FE00658EA3 /* Build configuration list for PBXNativeTarget "UICatalogForiOS" */;
 			buildPhases = (
+				C35C9CC0893FF03262858303 /* [CP] Check Pods Manifest.lock */,
 				9C21B82424A879FA00658EA3 /* Sources */,
 				9C21B82524A879FA00658EA3 /* Frameworks */,
 				9C21B82624A879FA00658EA3 /* Resources */,
+				65AC314DD42FFEE8CECAE5D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,19 +188,65 @@
 				9C21B83824A879FE00658EA3 /* LaunchScreen.storyboard in Resources */,
 				9C21B83524A879FE00658EA3 /* Assets.xcassets in Resources */,
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
+				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
+				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65AC314DD42FFEE8CECAE5D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C35C9CC0893FF03262858303 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UICatalogForiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C21B82424A879FA00658EA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
+				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C21B82E24A879FA00658EA3 /* SceneDelegate.swift in Sources */,
 			);
@@ -306,6 +390,7 @@
 		};
 		9C21B83D24A879FE00658EA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 066D05F15D64CF7AF281F164 /* Pods-UICatalogForiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +409,7 @@
 		};
 		9C21B83E24A879FE00658EA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37037662F05A248BEB1FBBF9 /* Pods-UICatalogForiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
