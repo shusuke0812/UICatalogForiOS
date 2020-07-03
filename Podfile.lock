@@ -1,16 +1,28 @@
 PODS:
+  - MXParallaxHeader (1.1.0)
+  - Pageboy (3.6.1)
+  - Tabman (2.9.0):
+    - Pageboy (~> 3.6.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - MXParallaxHeader
+  - Tabman
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
+    - MXParallaxHeader
+    - Pageboy
+    - Tabman
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  MXParallaxHeader: de3c867e10ba46e8f6e20c8ee1f2a910372b3b94
+  Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
+  Tabman: 55d3d18f393ce5119515cd0349c841a07774c895
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 7031140d3f7eb5d9bd559b74e582ecfd86a41d21
+PODFILE CHECKSUM: cfd86257e25064f56503ad2c354656bc1691304e
 
 COCOAPODS: 1.9.1
