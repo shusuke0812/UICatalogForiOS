@@ -6,8 +6,8 @@ target 'UICatalogForiOS' do
   use_frameworks!
 
 	pod 'XLPagerTabStrip', '~> 9.0'
-	pod 'MXParallaxHeader'
-	pod 'Tabman'
+	pod 'MXParallaxHeader', '0.6.1'
+	pod 'Tabman', '1.10.02'
 
   # Pods for UICatalogForiOS
 

@@ -3,24 +3,151 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Twitter Scroll View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="jh3-CH-ir2">
             <objects>
-                <viewController id="oeW-H7-mU0" customClass="TwitterScrollViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oeW-H7-mU0" customClass="MXScrollViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ijh-kd-fak">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="b0F-Fv-sMN"/>
                     </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                            <real key="value" value="220"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumHeight">
+                            <real key="value" value="80"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="OG3-3P-Tho" kind="custom" identifier="Header" customClass="MXParallaxHeaderSegue" id="yOZ-pJ-1m4"/>
+                        <segue destination="rOK-nP-oFe" kind="custom" identifier="Contents" customClass="MXScrollViewControllerSegue" id="Erc-GR-HtR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwD-OH-IHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="145" y="146"/>
         </scene>
+        <!--Header View Controller-->
+        <scene sceneID="F3j-a3-xHS">
+            <objects>
+                <viewController id="OG3-3P-Tho" customClass="HeaderViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uGV-lQ-FeE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RA7-WT-LmJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="sKW-wf-lcC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" name="baseColor"/>
+                        <viewLayoutGuide key="safeArea" id="6tc-bA-kOs"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="220"/>
+                    <connections>
+                        <outlet property="visualEffectView" destination="RA7-WT-LmJ" id="rrM-Gx-jz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49Y-OE-p5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="-159.375"/>
+        </scene>
+        <!--Table View-->
+        <scene sceneID="VD9-Vk-zAw">
+            <objects>
+                <tableViewController storyboardIdentifier="TableViewController" title="Table View" id="sIZ-Am-AbQ" customClass="TableViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J7o-Wt-sYU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="cvg-OM-orc">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvg-OM-orc" id="Rg2-th-Bgc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sIZ-Am-AbQ" id="ZzY-b6-YhJ"/>
+                            <outlet property="delegate" destination="sIZ-Am-AbQ" id="IL5-n1-TjU"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="414" height="896"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBh-Ii-6kG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="-82"/>
+        </scene>
+        <!--Paging Menu View Controller-->
+        <scene sceneID="kWR-Xo-fyF">
+            <objects>
+                <viewController id="rOK-nP-oFe" customClass="PagingMenuViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAy-Be-kFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pCe-U4-QFD"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="676"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieK-qw-1Ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="262"/>
+        </scene>
+        <!--Text View-->
+        <scene sceneID="qIP-pg-0WZ">
+            <objects>
+                <viewController storyboardIdentifier="TextViewController" title="Text View" id="XUB-c0-9Wm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pfd-6w-9XZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7mQ-rk-CJ1">
+                                <rect key="frame" x="10" y="144" width="394" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ige-4G-MAw" firstAttribute="bottom" secondItem="7mQ-rk-CJ1" secondAttribute="bottom" constant="10" id="5Jb-g8-eDg"/>
+                            <constraint firstItem="7mQ-rk-CJ1" firstAttribute="leading" secondItem="Ige-4G-MAw" secondAttribute="leading" constant="10" id="9Jq-cG-24w"/>
+                            <constraint firstItem="Ige-4G-MAw" firstAttribute="trailing" secondItem="7mQ-rk-CJ1" secondAttribute="trailing" constant="10" id="tU5-9X-gCZ"/>
+                            <constraint firstItem="7mQ-rk-CJ1" firstAttribute="top" secondItem="Ige-4G-MAw" secondAttribute="top" constant="100" id="xj9-Iy-mEY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ige-4G-MAw"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7d2-EQ-EPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="636"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="baseColor">
+            <color red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

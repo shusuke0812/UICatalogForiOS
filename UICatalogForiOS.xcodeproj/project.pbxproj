@@ -21,7 +21,9 @@
 		9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */; };
 		9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */; };
 		9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */; };
-		9C8E9FBB24AF6C2600593CB0 /* TwitterScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBA24AF6C2600593CB0 /* TwitterScrollViewController.swift */; };
+		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
+		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
+		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,9 @@
 		9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedFavoriteTabChildViewController.storyboard; sourceTree = "<group>"; };
 		9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedInfoTabChildViewController.storyboard; sourceTree = "<group>"; };
 		9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterScrollViewController.storyboard; sourceTree = "<group>"; };
-		9C8E9FBA24AF6C2600593CB0 /* TwitterScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterScrollViewController.swift; sourceTree = "<group>"; };
+		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
+		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,9 @@
 				9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */,
 				9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */,
 				9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */,
-				9C8E9FBA24AF6C2600593CB0 /* TwitterScrollViewController.swift */,
+				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
+				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
+				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -251,12 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
-				9C8E9FBB24AF6C2600593CB0 /* TwitterScrollViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
+				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
+				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C21B82E24A879FA00658EA3 /* SceneDelegate.swift in Sources */,
+				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
