@@ -20,9 +20,12 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="IiE-Vz-HmD"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="qAq-n3-sYT"/>
                             </scrollView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-Sx-AoR" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="60" width="414" height="70"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-Sx-AoR" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="64" width="414" height="70"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="zYE-b0-Nfi"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XQz-5S-8bq">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,17 +37,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="5TB-iu-pYm"/>
-                            <constraint firstItem="png-Ng-1Rr" firstAttribute="top" secondItem="iy3-Sx-AoR" secondAttribute="bottom" id="ewd-96-Em1"/>
-                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="top" secondItem="fuc-p3-S8J" secondAttribute="top" constant="20" id="f4S-K9-Xcw"/>
-                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="nMY-oq-1ja"/>
-                            <constraint firstItem="png-Ng-1Rr" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="o46-gw-LvL"/>
-                            <constraint firstItem="png-Ng-1Rr" firstAttribute="bottom" secondItem="fuc-p3-S8J" secondAttribute="bottom" id="oQ3-Ej-a3Q"/>
-                            <constraint firstItem="png-Ng-1Rr" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="r7D-OX-zmH"/>
+                            <constraint firstItem="png-Ng-1Rr" firstAttribute="top" secondItem="iy3-Sx-AoR" secondAttribute="bottom" id="2Un-Qg-lGw"/>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="top" secondItem="fuc-p3-S8J" secondAttribute="top" constant="20" id="jDt-2D-C3j"/>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="lcR-14-CeK"/>
+                            <constraint firstItem="png-Ng-1Rr" firstAttribute="top" secondItem="iy3-Sx-AoR" secondAttribute="bottom" id="o6E-r3-phM"/>
+                            <constraint firstItem="png-Ng-1Rr" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="tT7-3q-Efb"/>
+                            <constraint firstItem="png-Ng-1Rr" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="vai-oe-N0a"/>
+                            <constraint firstItem="png-Ng-1Rr" firstAttribute="bottom" secondItem="fuc-p3-S8J" secondAttribute="bottom" id="ycx-Qs-8mL"/>
+                            <constraint firstItem="iy3-Sx-AoR" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="zS1-fE-kCU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fuc-p3-S8J"/>
                     </view>
                     <connections>
+                        <outlet property="buttonBarView" destination="iy3-Sx-AoR" id="qD5-ct-3W4"/>
                         <outlet property="containerView" destination="png-Ng-1Rr" id="wMO-Uc-kZw"/>
                         <outlet property="scrollView" destination="png-Ng-1Rr" id="JRc-de-bL2"/>
                     </connections>

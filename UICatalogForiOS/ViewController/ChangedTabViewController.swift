@@ -24,7 +24,7 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+    /*
     override func viewWillLayoutSubviews() {
         // タブバーに下線を追加
         let underLine = CALayer()
@@ -32,6 +32,7 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         underLine.backgroundColor = UIColor.lightGray.cgColor
         scrollView.layer.addSublayer(underLine)
     }
+    */
     
     // ButtonBarPagerの設定
     func tabVarSetting() {
@@ -39,6 +40,7 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 17)
+        settings.style.buttonBarItemTitleColor = .lightGray
         settings.style.selectedBarBackgroundColor = .baseColor
         settings.style.selectedBarHeight = 2.0
                
@@ -47,13 +49,10 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarRightContentInset = 0
         settings.style.buttonBarMinimumInteritemSpacing = 16
         settings.style.buttonBarItemLeftRightMargin = 32
-        changeCurrentIndexProgressive = { oldCell, newCell, progressPercentage, changeCurrentIndex, animated in
-            guard changeCurrentIndex, let oldCell = oldCell, let newCell = newCell else { return }
-                   
-            oldCell.contentView.backgroundColor = .white
-            oldCell.label.textColor = .lightGray
-            newCell.contentView.backgroundColor = .white
-            newCell.label.textColor = .baseColor
+        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+                   guard changeCurrentIndex == true else { return }
+                   oldCell?.label.textColor = .lightGray
+                   newCell?.label.textColor = .baseColor
         }
     }
     
