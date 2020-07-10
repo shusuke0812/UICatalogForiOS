@@ -8,4 +8,4 @@ UIKitによるUIのライブラリ集
 
 ## 参考文献
 - 上部タブのページ切替：[XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)  
-
+- Twitter風スクロール：[MXParallaxHeader](https://github.com/maxep/MXParallaxHeader),[Tabman](https://github.com/uias/Tabman)  
