@@ -15,8 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="png-Ng-1Rr">
-                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="png-Ng-1Rr">
+                                <rect key="frame" x="0.0" y="134" width="414" height="728"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-eD-p9i">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3ia-eD-p9i" firstAttribute="width" secondItem="IiE-Vz-HmD" secondAttribute="width" id="EEw-gi-epR"/>
+                                    <constraint firstItem="3ia-eD-p9i" firstAttribute="top" secondItem="qAq-n3-sYT" secondAttribute="top" id="Fpc-HF-HwH"/>
+                                    <constraint firstItem="qAq-n3-sYT" firstAttribute="trailing" secondItem="3ia-eD-p9i" secondAttribute="trailing" id="IEV-3f-mJi"/>
+                                    <constraint firstItem="3ia-eD-p9i" firstAttribute="leading" secondItem="qAq-n3-sYT" secondAttribute="leading" id="IUl-NJ-3Hr"/>
+                                    <constraint firstItem="3ia-eD-p9i" firstAttribute="height" secondItem="IiE-Vz-HmD" secondAttribute="height" id="ghE-8S-DVr"/>
+                                    <constraint firstItem="qAq-n3-sYT" firstAttribute="bottom" secondItem="3ia-eD-p9i" secondAttribute="bottom" id="wlX-VA-Vyw"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="IiE-Vz-HmD"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="qAq-n3-sYT"/>
                             </scrollView>
