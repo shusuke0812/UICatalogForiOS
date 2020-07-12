@@ -24,6 +24,7 @@
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
 		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
+		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
 				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
 				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
+				9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
+				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
 				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,

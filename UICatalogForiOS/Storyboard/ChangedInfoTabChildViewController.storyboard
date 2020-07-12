@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="158.70535714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Floating Button View Controller-->
         <scene sceneID="Vzg-J9-krI">
             <objects>
-                <viewController id="Jff-u6-WqP" sceneMemberID="viewController">
+                <viewController id="Jff-u6-WqP" customClass="FloatingButtonViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFG-0E-ZTq">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,6 +146,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTap:" destination="Jff-u6-WqP" eventType="touchUpInside" id="d0G-vO-kai"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
