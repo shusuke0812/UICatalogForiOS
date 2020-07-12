@@ -97,8 +97,6 @@
 				9C21B83F24A87FEA00658EA3 /* ViewController */,
 				9C21B82B24A879FA00658EA3 /* AppDelegate.swift */,
 				9C21B82D24A879FA00658EA3 /* SceneDelegate.swift */,
-				9C21B82F24A879FA00658EA3 /* BaseViewController.swift */,
-				9C21B83124A879FA00658EA3 /* Main.storyboard */,
 				9C21B83424A879FE00658EA3 /* Assets.xcassets */,
 				9C21B83624A879FE00658EA3 /* LaunchScreen.storyboard */,
 				9C21B83924A879FE00658EA3 /* Info.plist */,
@@ -109,13 +107,9 @@
 		9C21B83F24A87FEA00658EA3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */,
-				9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */,
-				9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */,
-				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
-				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
-				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
-				9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */,
+				9CC0055524BB4DEF007AECEC /* Common */,
+				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
+				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -123,12 +117,66 @@
 		9C21B84224A883D100658EA3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9CC0055624BB4E77007AECEC /* Common */,
+				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
+				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9CC0055124BB4D88007AECEC /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
 				9C21B84324A883E800658EA3 /* ChangedTabViewController.storyboard */,
 				9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */,
 				9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */,
+			);
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */ = {
+			isa = PBXGroup;
+			children = (
 				9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */,
 			);
-			path = Storyboard;
+			path = MXParallaxHeaderAndTabman;
+			sourceTree = "<group>";
+		};
+		9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				9C21B84024A8812300658EA3 /* ChangedTabViewController.swift */,
+				9C21B84524A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift */,
+				9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */,
+			);
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
+				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
+				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
+			);
+			path = MXParallaxHeaderAndTabman;
+			sourceTree = "<group>";
+		};
+		9CC0055524BB4DEF007AECEC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9C21B82F24A879FA00658EA3 /* BaseViewController.swift */,
+				9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9CC0055624BB4E77007AECEC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9C21B83124A879FA00658EA3 /* Main.storyboard */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BAFEEA42025ED95F13FCDDB6 /* Pods */ = {
