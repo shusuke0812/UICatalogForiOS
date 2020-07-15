@@ -58,6 +58,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="タブ切替"/>
+                                <connections>
+                                    <action selector="moveToPage:" destination="L4O-Ih-hjR" eventType="touchUpInside" id="tOw-fr-Xa7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

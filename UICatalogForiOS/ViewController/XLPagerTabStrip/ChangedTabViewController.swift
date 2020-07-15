@@ -21,6 +21,11 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         // containerView.isScrollEnabled = false
     }
     
+    @IBAction func moveToPage(_ sender: Any) {
+        // ボタンをタップしてタブを切り替える（引数はタブのindexで左から0,1...）
+        moveToViewController(at: 1)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         // ナビゲーションバーを隠す処理
         super.viewWillAppear(animated)
