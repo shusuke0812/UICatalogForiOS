@@ -17,6 +17,8 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         tabBarSetting()
         super.viewDidLoad()
+        // スワイプによるタブ切替無効
+        // containerView.isScrollEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
