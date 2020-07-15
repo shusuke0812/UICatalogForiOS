@@ -48,15 +48,28 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhq-vA-SGA">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9bV-bD-ASX"/>
+                                    <constraint firstAttribute="height" constant="50" id="pzn-a3-lMH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="タブ切替"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="png-Ng-1Rr" firstAttribute="top" secondItem="iy3-Sx-AoR" secondAttribute="bottom" id="2Un-Qg-lGw"/>
+                            <constraint firstItem="Jhq-vA-SGA" firstAttribute="centerY" secondItem="ezj-Kk-RCa" secondAttribute="centerY" id="CRb-3s-C6J"/>
                             <constraint firstItem="iy3-Sx-AoR" firstAttribute="top" secondItem="fuc-p3-S8J" secondAttribute="top" constant="20" id="jDt-2D-C3j"/>
                             <constraint firstItem="iy3-Sx-AoR" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="lcR-14-CeK"/>
                             <constraint firstItem="png-Ng-1Rr" firstAttribute="top" secondItem="iy3-Sx-AoR" secondAttribute="bottom" id="o6E-r3-phM"/>
                             <constraint firstItem="png-Ng-1Rr" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="tT7-3q-Efb"/>
                             <constraint firstItem="png-Ng-1Rr" firstAttribute="trailing" secondItem="fuc-p3-S8J" secondAttribute="trailing" id="vai-oe-N0a"/>
+                            <constraint firstItem="Jhq-vA-SGA" firstAttribute="centerX" secondItem="ezj-Kk-RCa" secondAttribute="centerX" id="wvq-n8-VOV"/>
                             <constraint firstItem="png-Ng-1Rr" firstAttribute="bottom" secondItem="fuc-p3-S8J" secondAttribute="bottom" id="ycx-Qs-8mL"/>
                             <constraint firstItem="iy3-Sx-AoR" firstAttribute="leading" secondItem="fuc-p3-S8J" secondAttribute="leading" id="zS1-fE-kCU"/>
                         </constraints>
