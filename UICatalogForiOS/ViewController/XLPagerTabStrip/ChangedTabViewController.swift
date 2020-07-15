@@ -15,7 +15,7 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
-        tabVarSetting()
+        tabBarSetting()
         super.viewDidLoad()
     }
     
@@ -35,7 +35,7 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
     */
     
     // ButtonBarPagerの設定
-    func tabVarSetting() {
+    func tabBarSetting() {
         // 色・文字サイズ・タブバーの設定
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
