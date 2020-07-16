@@ -13,12 +13,16 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    var floatingButtonView: FloatingButtonViewController!
+
     override func viewDidLoad() {
         tabBarSetting()
         super.viewDidLoad()
         // スワイプによるタブ切替無効
         // containerView.isScrollEnabled = false
+        
+        floatingButtonView = FloatingButtonViewController()
+        floatingButtonView.delegate = self
     }
     
     @IBAction func moveToPage(_ sender: Any) {
@@ -70,6 +74,13 @@ class ChangedTabViewController: ButtonBarPagerTabStripViewController {
         return [notificationOfDirectSalesChildVC, notificationOfAdminChildVC]
     }
 
+}
+
+extension ChangedTabViewController: FloatingButtonViewControllerDelegate {
+    func didTapChangeTab() {
+        print("DEBUG：　ボタンタップメソッドが呼ばれました")
+        moveToViewController(at: 1)
+    }
 }
 
 extension UIColor {

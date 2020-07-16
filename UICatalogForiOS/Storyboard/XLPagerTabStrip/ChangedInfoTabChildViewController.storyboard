@@ -156,6 +156,7 @@
                             <constraint firstItem="ovO-Uy-tVT" firstAttribute="centerX" secondItem="hFG-0E-ZTq" secondAttribute="centerX" id="fm0-Gn-tU6"/>
                             <constraint firstItem="ovO-Uy-tVT" firstAttribute="centerY" secondItem="hFG-0E-ZTq" secondAttribute="centerY" id="r9V-4S-0oS"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="MYW-wG-MWZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr6-AL-5vc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
