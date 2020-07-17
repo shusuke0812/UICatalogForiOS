@@ -10,11 +10,17 @@ import UIKit
 import XLPagerTabStrip
 
 class ChangedInfoTabChildViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func didTapChangeTab(_ sender: Any) {
+        print("DEBUG: ボタンがタップされました")
+        let parentVC = self.parent as! ChangedTabViewController
+        parentVC.moveToViewController(at: 0)
+    }
 }
+
 
 extension ChangedInfoTabChildViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

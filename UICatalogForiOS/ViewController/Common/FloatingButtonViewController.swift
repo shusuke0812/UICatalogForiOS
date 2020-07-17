@@ -10,7 +10,7 @@ import UIKit
 
 protocol FloatingButtonViewControllerDelegate: class {
     // タブを切り替える
-    func didTapChangeTab()
+    func didTapChangeEvent()
 }
 
 class FloatingButtonViewController: UIViewController {
@@ -23,6 +23,6 @@ class FloatingButtonViewController: UIViewController {
     }
     @IBAction func buttonTap(_ sender: Any) {
         print("DEBUG：　ボタンがタップされました")
-        self.delegate?.didTapChangeTab()
+        self.delegate?.didTapChangeEvent()
     }
 }
