@@ -111,10 +111,10 @@
 		9C21B83F24A87FEA00658EA3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9CBF376D24D027BE006E304E /* AccordionMenu */,
 				9CC0055524BB4DEF007AECEC /* Common */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
+				9CBF376D24D027BE006E304E /* AccordionMenu */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,10 +122,10 @@
 		9C21B84224A883D100658EA3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				9CBF377024D02818006E304E /* AccordionMenu */,
 				9CC0055624BB4E77007AECEC /* Common */,
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
+				9CBF377024D02818006E304E /* AccordionMenu */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
