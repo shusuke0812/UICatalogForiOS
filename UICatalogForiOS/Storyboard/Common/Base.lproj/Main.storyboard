@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTg-WN-3Ui">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTg-WN-3Ui">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--タブ1-->
+        <!--StackView-->
         <scene sceneID="odp-98-eJe">
             <objects>
                 <viewController id="j1y-gY-exp" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Rrx-sL-tZH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="タブ1" image="info.circle" catalog="system" id="mGp-LP-499"/>
+                    <tabBarItem key="tabBarItem" title="StackView" image="info.circle" catalog="system" id="mGp-LP-499"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9F-wD-X98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,9 +123,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="64" height="50"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <namedColor name="baseColor">
             <color red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
