@@ -38,9 +38,9 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         // MXScrollViewControllerのヘッダへテーブルのindexを渡して画面遷移先でindexを表示させる
         let s: UIStoryboard = UIStoryboard(name: "TwitterScrollViewController", bundle: nil)
-        let vc: MXScrollViewController = s.instantiateInitialViewController() as! MXScrollViewController
+        let vc: MXParentScrollViewController = s.instantiateInitialViewController() as! MXParentScrollViewController
         
-
+        vc.getValue = "table index is \(indexPath.row)"
         
         self.present(vc, animated: true, completion: nil)
     }
