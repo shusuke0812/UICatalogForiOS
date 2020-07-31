@@ -4,26 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--タブ2-->
-        <scene sceneID="RIK-aS-fwT">
-            <objects>
-                <viewController id="mMk-Tj-8a0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4ht-Ck-58j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="5jd-4O-ub4"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="タブ2" image="info.circle" catalog="system" id="6YH-ky-ayd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jOi-YE-Vih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3581.1594202898555" y="871.875"/>
-        </scene>
         <!--TwitterScrollViewController-->
         <scene sceneID="XkR-mD-CWZ">
             <objects>
@@ -60,7 +43,7 @@
                         <segue destination="StR-UE-wJv" kind="relationship" relationship="viewControllers" id="kB1-iB-h3a"/>
                         <segue destination="oSU-Kw-uyP" kind="relationship" relationship="viewControllers" id="ga2-jT-2cQ"/>
                         <segue destination="wP8-Xs-ppa" kind="relationship" relationship="viewControllers" id="1dC-ed-HSI"/>
-                        <segue destination="mMk-Tj-8a0" kind="relationship" relationship="viewControllers" id="ujc-d1-Mge"/>
+                        <segue destination="Mg4-UH-Jtw" kind="relationship" relationship="viewControllers" id="ujc-d1-Mge"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJL-8r-SoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,11 +117,41 @@
             </objects>
             <point key="canvasLocation" x="1864" y="1300"/>
         </scene>
+        <!--TableView-->
+        <scene sceneID="ewX-6R-8jd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mg4-UH-Jtw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TableView" image="list.dash" catalog="system" id="6YH-ky-ayd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RlU-Jo-cFC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7rK-U0-SDs" kind="relationship" relationship="rootViewController" id="LX7-36-Ryw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIM-qE-wAB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="872"/>
+        </scene>
+        <!--CommonTableViewController-->
+        <scene sceneID="s2N-XT-vk6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CommonTableViewController" id="7rK-U0-SDs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KwV-7p-BXs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxf-Ao-s91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829" y="1283"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="baseColor">
             <color red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
