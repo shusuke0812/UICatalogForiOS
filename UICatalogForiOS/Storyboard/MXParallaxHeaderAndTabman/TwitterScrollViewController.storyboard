@@ -58,9 +58,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊＊＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ien-UJ-lTF">
-                                            <rect key="frame" x="214" y="20" width="100" height="23"/>
+                                            <rect key="frame" x="214" y="20" width="180" height="23"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="Zzw-gX-fnb"/>
+                                                <constraint firstAttribute="width" constant="180" id="Zzw-gX-fnb"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <nil key="textColor"/>
@@ -159,9 +159,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊＊＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg0-Ts-QMQ">
-                                <rect key="frame" x="214" y="79" width="100" height="23"/>
+                                <rect key="frame" x="214" y="79" width="180" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="TxY-01-ZNf"/>
+                                    <constraint firstAttribute="width" constant="180" id="TxY-01-ZNf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
