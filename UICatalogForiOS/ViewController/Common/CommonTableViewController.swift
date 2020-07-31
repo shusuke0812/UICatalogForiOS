@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MXParallaxHeader
 
 class CommonTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,5 +26,10 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
 
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let s: UIStoryboard = UIStoryboard(name: "TwitterScrollViewController", bundle: nil)
+        let vc: UIViewController = s.instantiateInitialViewController() as! MXScrollViewController
+        self.present(vc, animated: true, completion: nil)
+    }
 }
