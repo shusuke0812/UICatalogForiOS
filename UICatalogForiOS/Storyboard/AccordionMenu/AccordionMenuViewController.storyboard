@@ -66,16 +66,36 @@
                                     <constraint firstItem="Yh7-Ar-ej5" firstAttribute="leading" secondItem="9Bm-vA-oKw" secondAttribute="leading" id="v8e-Ja-gJv"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="値渡し：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxB-93-dMf">
+                                <rect key="frame" x="20" y="281" width="100" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IoE-Zs-KYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊＊＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l0-W5-hJV">
+                                <rect key="frame" x="130" y="281" width="52" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lxB-93-dMf" firstAttribute="top" secondItem="9Bm-vA-oKw" secondAttribute="bottom" constant="40" id="3HA-Zl-XVv"/>
+                            <constraint firstItem="lxB-93-dMf" firstAttribute="leading" secondItem="hGj-NR-3r0" secondAttribute="leading" constant="20" id="NAN-Yt-9Of"/>
+                            <constraint firstItem="1l0-W5-hJV" firstAttribute="top" secondItem="9Bm-vA-oKw" secondAttribute="bottom" constant="40" id="SnP-bH-2JL"/>
                             <constraint firstItem="hGj-NR-3r0" firstAttribute="trailing" secondItem="9Bm-vA-oKw" secondAttribute="trailing" constant="100" id="Vpl-Sr-Wdf"/>
+                            <constraint firstItem="1l0-W5-hJV" firstAttribute="leading" secondItem="lxB-93-dMf" secondAttribute="trailing" constant="10" id="rAg-hR-O0p"/>
                             <constraint firstItem="9Bm-vA-oKw" firstAttribute="top" secondItem="hGj-NR-3r0" secondAttribute="top" constant="50" id="tlh-SU-Dbf"/>
                             <constraint firstItem="9Bm-vA-oKw" firstAttribute="leading" secondItem="hGj-NR-3r0" secondAttribute="leading" constant="20" id="vje-Bm-6T6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hGj-NR-3r0"/>
                     </view>
                     <connections>
+                        <outlet property="getValue" destination="1l0-W5-hJV" id="jOb-oC-BDM"/>
                         <outlet property="saleTimeDetail" destination="axj-gc-MG0" id="8NV-Cb-EwE"/>
                     </connections>
                 </viewController>

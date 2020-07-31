@@ -13,9 +13,12 @@ class AccordionMenuViewController: UIViewController {
     var showSaleTimeDetail = true
     
     @IBOutlet weak var saleTimeDetail: UILabel!
+    @IBOutlet weak var getValue: UILabel!
+    var getPreviousPageValue: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getValue.text = getPreviousPageValue
     }
     
 }
