@@ -50,6 +50,29 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sKW-wf-lcC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前画面からの値渡し：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqI-qC-yEB">
+                                            <rect key="frame" x="10" y="20" width="194" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊＊＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ien-UJ-lTF">
+                                            <rect key="frame" x="214" y="20" width="100" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="Zzw-gX-fnb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ien-UJ-lTF" firstAttribute="top" secondItem="sKW-wf-lcC" secondAttribute="top" constant="20" id="HHt-Wi-Bd0"/>
+                                        <constraint firstItem="TqI-qC-yEB" firstAttribute="top" secondItem="sKW-wf-lcC" secondAttribute="top" constant="20" id="S5v-4k-6vz"/>
+                                        <constraint firstItem="Ien-UJ-lTF" firstAttribute="leading" secondItem="TqI-qC-yEB" secondAttribute="trailing" constant="10" id="Tv1-B2-BnI"/>
+                                        <constraint firstItem="TqI-qC-yEB" firstAttribute="leading" secondItem="sKW-wf-lcC" secondAttribute="leading" constant="10" id="qj6-aO-3QZ"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
@@ -128,11 +151,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前画面からの値渡し：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytX-2A-BU7">
+                                <rect key="frame" x="10" y="79" width="194" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＊＊＊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg0-Ts-QMQ">
+                                <rect key="frame" x="214" y="79" width="100" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TxY-01-ZNf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ige-4G-MAw" firstAttribute="bottom" secondItem="7mQ-rk-CJ1" secondAttribute="bottom" constant="10" id="5Jb-g8-eDg"/>
                             <constraint firstItem="7mQ-rk-CJ1" firstAttribute="leading" secondItem="Ige-4G-MAw" secondAttribute="leading" constant="10" id="9Jq-cG-24w"/>
+                            <constraint firstItem="vg0-Ts-QMQ" firstAttribute="top" secondItem="Ige-4G-MAw" secondAttribute="top" constant="35" id="ED7-Hp-tSC"/>
+                            <constraint firstItem="ytX-2A-BU7" firstAttribute="leading" secondItem="Ige-4G-MAw" secondAttribute="leading" constant="10" id="ER2-gQ-6uk"/>
+                            <constraint firstItem="ytX-2A-BU7" firstAttribute="top" secondItem="Ige-4G-MAw" secondAttribute="top" constant="35" id="IB3-iy-uqm"/>
+                            <constraint firstItem="vg0-Ts-QMQ" firstAttribute="leading" secondItem="ytX-2A-BU7" secondAttribute="trailing" constant="10" id="ZCt-uX-HQe"/>
                             <constraint firstItem="Ige-4G-MAw" firstAttribute="trailing" secondItem="7mQ-rk-CJ1" secondAttribute="trailing" constant="10" id="tU5-9X-gCZ"/>
                             <constraint firstItem="7mQ-rk-CJ1" firstAttribute="top" secondItem="Ige-4G-MAw" secondAttribute="top" constant="100" id="xj9-Iy-mEY"/>
                         </constraints>
