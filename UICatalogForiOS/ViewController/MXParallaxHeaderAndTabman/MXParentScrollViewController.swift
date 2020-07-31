@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MXParallaxHeader
 
-class MXParentScrollViewController: UIViewController {
+class MXParentScrollViewController: MXScrollViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

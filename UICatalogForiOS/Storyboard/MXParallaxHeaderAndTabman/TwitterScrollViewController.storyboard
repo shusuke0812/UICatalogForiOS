@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scroll View Controller-->
+        <!--Parent Scroll View Controller-->
         <scene sceneID="jh3-CH-ir2">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="oeW-H7-mU0" customClass="MXScrollViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="oeW-H7-mU0" customClass="MXParentScrollViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ijh-kd-fak">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +82,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="220"/>
                     <connections>
+                        <outlet property="getValueLabel" destination="Ien-UJ-lTF" id="kcT-Qz-Okt"/>
                         <outlet property="visualEffectView" destination="RA7-WT-LmJ" id="rrM-Gx-jz0"/>
                     </connections>
                 </viewController>
