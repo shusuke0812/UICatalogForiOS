@@ -11,11 +11,14 @@ import MXParallaxHeader
 
 class HeaderViewController: UIViewController {
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    @IBOutlet weak var getValueLabel: UILabel!
+    
+    public var getPreviousPageValue: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         parallaxHeader?.delegate = self
-      
+        getValueLabel.text = getPreviousPageValue
     }
 
 }
