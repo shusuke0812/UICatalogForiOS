@@ -139,7 +139,7 @@
         <!--Text View-->
         <scene sceneID="qIP-pg-0WZ">
             <objects>
-                <viewController storyboardIdentifier="TextViewController" title="Text View" id="XUB-c0-9Wm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextViewController" title="Text View" id="XUB-c0-9Wm" customClass="TextViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pfd-6w-9XZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +182,9 @@
                         <viewLayoutGuide key="safeArea" id="Ige-4G-MAw"/>
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="getValueLabel" destination="vg0-Ts-QMQ" id="NI5-8z-tdf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7d2-EQ-EPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
