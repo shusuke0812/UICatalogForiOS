@@ -25,5 +25,10 @@ class MXParentScrollViewController: MXScrollViewController {
             let vc: HeaderViewController = (segue.destination as? HeaderViewController)!
             vc.getPreviousPageValue = getValue
         }
+        
+        if (segue.identifier == "Contents") {
+            let vc: PagingMenuViewController = (segue.destination as? PagingMenuViewController)!
+        
+        }
     }
 }

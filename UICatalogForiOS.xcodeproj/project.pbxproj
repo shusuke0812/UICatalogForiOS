@@ -30,6 +30,7 @@
 		9CBF377224D02837006E304E /* AccordionMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF377124D02837006E304E /* AccordionMenuViewController.storyboard */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
+		9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303424D487DF00B5453C /* TextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9CBF377124D02837006E304E /* AccordionMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccordionMenuViewController.storyboard; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
+		9CC5303424D487DF00B5453C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
 				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
 				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
+				9CC5303424D487DF00B5453C /* TextViewController.swift */,
 			);
 			path = MXParallaxHeaderAndTabman;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
 				9CBF376F24D0280D006E304E /* AccordionMenuViewController.swift in Sources */,
+				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,
 				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,
