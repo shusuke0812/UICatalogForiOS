@@ -28,8 +28,20 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // AccordionMenuViewControllerへテーブルのindexを渡して画面遷移先でindexを表示させる
+        /*
+        let s: UIStoryboard = UIStoryboard(name: "AccordionMenuViewController", bundle: nil)
+        let vc: AccordionMenuViewController = s.instantiateInitialViewController() as! AccordionMenuViewController
+        
+        vc.getPreviousPageValue = "\(indexPath.row)"
+        */
+        
+        // MXScrollViewControllerのヘッダへテーブルのindexを渡して画面遷移先でindexを表示させる
         let s: UIStoryboard = UIStoryboard(name: "TwitterScrollViewController", bundle: nil)
-        let vc: UIViewController = s.instantiateInitialViewController() as! MXScrollViewController
+        let vc: MXScrollViewController = s.instantiateInitialViewController() as! MXScrollViewController
+        
+
+        
         self.present(vc, animated: true, completion: nil)
     }
 }
