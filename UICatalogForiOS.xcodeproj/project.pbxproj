@@ -183,10 +183,10 @@
 		9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */ = {
 			isa = PBXGroup;
 			children = (
+				9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */,
 				9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */,
 				9C8E9FC024AF79A500593CB0 /* TableViewController.swift */,
 				9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */,
-				9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */,
 			);
 			path = MXParallaxHeaderAndTabman;
 			sourceTree = "<group>";
