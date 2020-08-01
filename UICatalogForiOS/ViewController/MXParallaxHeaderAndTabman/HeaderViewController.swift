@@ -13,7 +13,7 @@ class HeaderViewController: UIViewController {
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet weak var getValueLabel: UILabel!
     
-    public var getPreviousPageValue: String?
+    var getPreviousPageValue: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

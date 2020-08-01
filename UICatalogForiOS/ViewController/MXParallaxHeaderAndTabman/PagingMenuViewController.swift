@@ -12,12 +12,15 @@ import Pageboy
 
 class PagingMenuViewController: TabmanViewController {
     
+    // 一番初めにこれらのViewControllerが表示される
     private lazy var viewControllers: [UIViewController] = {
         [
             storyboard!.instantiateViewController(withIdentifier: "TextViewController"),
             storyboard!.instantiateViewController(withIdentifier: "TableViewController")
         ]
     }()
+    
+    var getPreviousPageValue: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class PagingMenuViewController: TabmanViewController {
             Item(title: "Text View"),
             Item(title: "Table View")
         ]
+        // sendValueToNextPage()
     }
 }
 

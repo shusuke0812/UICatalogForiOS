@@ -13,7 +13,7 @@ import MXParallaxHeader
 // ライブラリを拡張するクラス
 class MXParentScrollViewController: MXScrollViewController {
     
-    public var getValue: String?
+    var getValue: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,14 @@ class MXParentScrollViewController: MXScrollViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("DEBUG: 拡張MXScrollVCのメソッドが呼ばれました")
         if (segue.identifier == "Header") {
-            let vc: HeaderViewController = (segue.destination as? HeaderViewController)!
-            vc.getPreviousPageValue = getValue
+            let vc1: HeaderViewController = (segue.destination as? HeaderViewController)!
+            vc1.getPreviousPageValue = getValue
         }
         
         if (segue.identifier == "Contents") {
-            let vc: PagingMenuViewController = (segue.destination as? PagingMenuViewController)!
-        
+            let vc2: PagingMenuViewController = (segue.destination as? PagingMenuViewController)!
+            vc2.getPreviousPageValue = getValue
+            
         }
     }
 }

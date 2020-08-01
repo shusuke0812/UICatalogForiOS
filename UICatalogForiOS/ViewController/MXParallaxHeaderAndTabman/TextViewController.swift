@@ -9,13 +9,12 @@
 import UIKit
 
 class TextViewController: UIViewController {
-
     
     @IBOutlet weak var getValueLabel: UILabel!
-    var getPreviousPageValue: String?
+    var getPreviousPageValue2: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getValueLabel.text = getPreviousPageValue
+        //getValueLabel.text = getPreviousPageValue2
     }
 }
