@@ -10,8 +10,6 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    @IBOutlet var tableView: UITableView!
-    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 50
     }
@@ -21,5 +19,4 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = "Cell \(indexPath.row)"
         return cell
     }
-
 }

@@ -115,9 +115,6 @@
                         </connections>
                     </tableView>
                     <size key="freeformSize" width="414" height="896"/>
-                    <connections>
-                        <outlet property="tableView" destination="J7o-Wt-sYU" id="JiB-oH-xwb"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBh-Ii-6kG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
