@@ -10,8 +10,11 @@ import UIKit
 import MXParallaxHeader
 
 class CommonTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
+        self.initRefreshControl()
         super.viewDidLoad()
     }
 
@@ -43,5 +46,17 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
         vc.getValue = "table index is \(indexPath.row)"
         
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    private func initRefreshControl() {
+        let refresh: UIRefreshControl = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(self.refresh(sender:)), for: .valueChanged)
+        self.tableView.refreshControl = refresh
+    }
+    
+    @objc private func refresh(sender: UIRefreshControl) {
+        print("DEBUG： リフレッシュ機能が起動しました")
+        self.tableView.reloadData()
+        self.tableView.refreshControl?.endRefreshing()
     }
 }
