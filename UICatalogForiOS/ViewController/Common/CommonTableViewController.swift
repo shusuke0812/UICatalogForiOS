@@ -32,20 +32,26 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // AccordionMenuViewControllerへテーブルのindexを渡して画面遷移先でindexを表示させる
-        /*
+        #if false
         let s: UIStoryboard = UIStoryboard(name: "AccordionMenuViewController", bundle: nil)
         let vc: AccordionMenuViewController = s.instantiateInitialViewController() as! AccordionMenuViewController
         
         vc.getPreviousPageValue = "\(indexPath.row)"
-        */
+        #endif
         
         // MXScrollViewControllerのヘッダへテーブルのindexを渡して画面遷移先でindexを表示させる
         let s: UIStoryboard = UIStoryboard(name: "TwitterScrollViewController", bundle: nil)
         let vc: MXParentScrollViewController = s.instantiateInitialViewController() as! MXParentScrollViewController
-        
         vc.getValue = "table index is \(indexPath.row)"
-        
         self.present(vc, animated: true, completion: nil)
+        
+        // tableView + modalView + refreshControlのテスト用
+        /* この実装だと遷移先ではrefreshControllが効いてしまいモーダルビューを下スワイプで閉じることができない */
+        #if false
+        let s: UIStoryboard = UIStoryboard(name: "CommonTableViewController", bundle: nil)
+        let vc: CommonTableViewController = s.instantiateInitialViewController() as! CommonTableViewController
+        present(vc, animated: true, completion: nil)
+        #endif
     }
     
     private func initRefreshControl() {
