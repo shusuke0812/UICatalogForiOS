@@ -12,13 +12,24 @@ class AccordionMenuViewController: UIViewController {
 
     var showSaleTimeDetail = true
     
+    // アコーディオン
     @IBOutlet weak var saleTimeDetail: UILabel!
     @IBOutlet weak var getValue: UILabel!
     var getPreviousPageValue: String?
     
+    // もっと見る
+    @IBOutlet weak var heightView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getValue.text = getPreviousPageValue
+    }
+    @IBAction func moreReadButton(_ sender: Any) {
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self = self else { return }
+            self.heightView.isHidden.toggle()
+        }
     }
     
 }
