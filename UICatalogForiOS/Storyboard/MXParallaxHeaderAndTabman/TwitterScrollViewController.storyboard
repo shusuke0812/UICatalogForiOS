@@ -76,8 +76,19 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ParallaxHeader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-UZ-EZw">
+                                <rect key="frame" x="10" y="179" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="baseColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Py1-UZ-EZw" secondAttribute="bottom" constant="20" id="0Yr-r8-GtR"/>
+                            <constraint firstAttribute="trailing" secondItem="Py1-UZ-EZw" secondAttribute="trailing" constant="10" id="baI-bh-BuZ"/>
+                            <constraint firstItem="Py1-UZ-EZw" firstAttribute="leading" secondItem="uGV-lQ-FeE" secondAttribute="leading" constant="10" id="fHB-M9-fUb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6tc-bA-kOs"/>
                     </view>
                     <size key="freeformSize" width="414" height="220"/>
