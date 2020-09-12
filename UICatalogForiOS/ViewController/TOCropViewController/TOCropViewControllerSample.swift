@@ -9,16 +9,27 @@
 import UIKit
 import CropViewController
 
-class TOCropViewController: UIViewController {
+class TOCropViewControllerSample: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUI()
     }
     @IBAction func tapImageView(_ sender: Any) {
+        self.setImagePicker()
     }
 }
 
-extension TOCropViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate,  CropViewControllerDelegate {
+extension TOCropViewControllerSample {
+    func setUI() {
+        self.imageView.clipsToBounds = true
+        self.imageView.layer.cornerRadius = self.imageView.frame.width / 2
+    }
+}
+
+extension TOCropViewControllerSample: UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
     func setImagePicker() {
         let picker: UIImagePickerController = UIImagePickerController()
         picker.delegate = self
@@ -29,7 +40,7 @@ extension TOCropViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let originalImage: UIImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
         
-        let cropVC: CropViewController = CropViewController(croppingStyle: .circular, image: originalImage)
+        let cropVC = CropViewController(croppingStyle: .circular, image: originalImage)
         cropVC.delegate = self
         picker.dismiss(animated: true, completion: {
             self.present(cropVC, animated: true, completion: nil)
@@ -37,6 +48,7 @@ extension TOCropViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
     
     func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
-        print("test")
+        self.imageView.image = image
+        cropViewController.dismiss(animated: false, completion: nil)
     }
 }

@@ -37,6 +37,9 @@
                                 <rect key="frame" x="49" y="426" width="316" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="kDx-83-qFT" eventType="touchUpInside" id="ZFO-oW-deP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

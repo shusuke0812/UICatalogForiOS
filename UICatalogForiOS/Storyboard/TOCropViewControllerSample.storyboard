@@ -7,23 +7,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Crop View Controller Sample-->
         <scene sceneID="Dlz-jq-1oM">
             <objects>
-                <viewController id="9aK-b2-n6A" sceneMemberID="viewController">
+                <viewController id="9aK-b2-n6A" customClass="TOCropViewControllerSample" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJ6-xG-L7C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-7w-XAA">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-7w-XAA">
                                 <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" red="1" green="0.76585935780000003" blue="0.55775397640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="4X1-v5-Ys7"/>
                                     <constraint firstAttribute="width" constant="120" id="fso-4Y-6lF"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3cV-ET-2Lp" appends="YES" id="mZp-C8-kyR"/>
+                                    <outletCollection property="gestureRecognizers" destination="4q1-Hx-YEl" appends="YES" id="O6d-m8-NTI"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -34,16 +35,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OWg-Jw-X0s"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ekO-7w-XAA" id="pPg-sL-X8q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAT-vp-N9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="a9Q-4k-6u4" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="3cV-ET-2Lp">
+                <tapGestureRecognizer id="4q1-Hx-YEl">
                     <connections>
-                        <action selector="tapImageView:" destination="a9Q-4k-6u4" id="tnu-uu-t03"/>
+                        <action selector="tapImageView:" destination="9aK-b2-n6A" id="QIx-eS-ltT"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="155" y="122"/>
+            <point key="canvasLocation" x="158" y="134"/>
         </scene>
     </scenes>
 </document>
