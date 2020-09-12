@@ -31,6 +31,7 @@
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
 		9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303424D487DF00B5453C /* TextViewController.swift */; };
+		9CC7C3A1250CA3D80093FEBB /* TOCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC7C3A0250CA3D80093FEBB /* TOCropViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
 		9CC5303424D487DF00B5453C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		9CC7C3A0250CA3D80093FEBB /* TOCropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOCropViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		9C21B83F24A87FEA00658EA3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9CC7C39F250CA3BE0093FEBB /* TOCropViewController */,
 				9CC0055524BB4DEF007AECEC /* Common */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
@@ -211,6 +214,14 @@
 				9C154BB924D3FD2900507DF6 /* CommonTableViewController.storyboard */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9CC7C39F250CA3BE0093FEBB /* TOCropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CC7C3A0250CA3D80093FEBB /* TOCropViewController.swift */,
+			);
+			path = TOCropViewController;
 			sourceTree = "<group>";
 		};
 		BAFEEA42025ED95F13FCDDB6 /* Pods */ = {
@@ -348,6 +359,7 @@
 				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
 				9CBF376F24D0280D006E304E /* AccordionMenuViewController.swift in Sources */,
+				9CC7C3A1250CA3D80093FEBB /* TOCropViewController.swift in Sources */,
 				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,

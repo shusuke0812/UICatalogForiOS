@@ -8,6 +8,7 @@ target 'UICatalogForiOS' do
 	pod 'XLPagerTabStrip', '~> 9.0'
 	pod 'MXParallaxHeader', '0.6.1'
 	pod 'Tabman', '1.10.02'
+	pod 'CropViewController'
 
   # Pods for UICatalogForiOS
 
