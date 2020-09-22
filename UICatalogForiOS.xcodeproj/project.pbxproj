@@ -143,11 +143,11 @@
 		9C21B84224A883D100658EA3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */,
+				9CAD64C1251A35C6000B0A33 /* TOCropViewController */,
 				9CC0055624BB4E77007AECEC /* Common */,
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
-				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
-				9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -183,6 +183,14 @@
 				9CAD64B3251A343F000B0A33 /* ListViewCell.xib */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		9CAD64C1251A35C6000B0A33 /* TOCropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
+			);
+			path = TOCropViewController;
 			sourceTree = "<group>";
 		};
 		9CC0055124BB4D88007AECEC /* XLPagerTabStrip */ = {
