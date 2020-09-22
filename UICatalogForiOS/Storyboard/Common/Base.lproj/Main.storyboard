@@ -44,6 +44,7 @@
                         <segue destination="StR-UE-wJv" kind="relationship" relationship="viewControllers" id="kB1-iB-h3a"/>
                         <segue destination="oSU-Kw-uyP" kind="relationship" relationship="viewControllers" id="ga2-jT-2cQ"/>
                         <segue destination="Mg4-UH-Jtw" kind="relationship" relationship="viewControllers" id="ujc-d1-Mge"/>
+                        <segue destination="ziy-TT-gOv" kind="relationship" relationship="viewControllers" id="TW8-xM-q53"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJL-8r-SoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,6 +89,33 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="876.5625"/>
         </scene>
+        <!--ライブラリ集-->
+        <scene sceneID="P9M-Ha-4uT">
+            <objects>
+                <navigationController id="ziy-TT-gOv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ライブラリ集" image="folder.fill" catalog="system" id="9OL-ms-pKa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="81v-mM-dHl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sK5-od-F6F" kind="relationship" relationship="rootViewController" id="ggF-xr-Ac0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsg-tz-pfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="872"/>
+        </scene>
+        <!--ListViewController-->
+        <scene sceneID="hq0-XM-5RN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListViewController" id="sK5-od-F6F" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gLA-nP-3fm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSX-uy-E82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="1282"/>
+        </scene>
         <!--TableView-->
         <scene sceneID="ewX-6R-8jd">
             <objects>
@@ -120,6 +148,7 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="baseColor">
