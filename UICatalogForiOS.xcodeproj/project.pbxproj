@@ -26,6 +26,11 @@
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
 		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
+		9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64A5251A3389000B0A33 /* ListViewController.swift */; };
+		9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */; };
+		9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64AF251A3417000B0A33 /* ListBaseView.swift */; };
+		9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64B2251A343F000B0A33 /* ListViewCell.swift */; };
+		9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64B3251A343F000B0A33 /* ListViewCell.xib */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 		9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
@@ -57,6 +62,11 @@
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		9CAD64A5251A3389000B0A33 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		9CAD64AF251A3417000B0A33 /* ListBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBaseView.swift; sourceTree = "<group>"; };
+		9CAD64B2251A343F000B0A33 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		9CAD64B3251A343F000B0A33 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TOCropViewControllerSample.storyboard; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +115,8 @@
 		9C21B82A24A879FA00658EA3 /* UICatalogForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9CAD64AC251A33E2000B0A33 /* ViewModel */,
+				9CAD64AB251A33DC000B0A33 /* View */,
 				9C21B84224A883D100658EA3 /* Storyboard */,
 				9C21B83F24A87FEA00658EA3 /* ViewController */,
 				9C21B82B24A879FA00658EA3 /* AppDelegate.swift */,
@@ -119,6 +131,7 @@
 		9C21B83F24A87FEA00658EA3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9CAD64A5251A3389000B0A33 /* ListViewController.swift */,
 				9CC7C39F250CA3BE0093FEBB /* TOCropViewController */,
 				9CC0055524BB4DEF007AECEC /* Common */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
@@ -134,8 +147,42 @@
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
 				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
+				9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9CAD64AB251A33DC000B0A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CAD64AE251A33FE000B0A33 /* UITableViewCell */,
+				9CAD64AD251A33F8000B0A33 /* BaseView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CAD64AC251A33E2000B0A33 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CAD64AD251A33F8000B0A33 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				9CAD64AF251A3417000B0A33 /* ListBaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		9CAD64AE251A33FE000B0A33 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9CAD64B2251A343F000B0A33 /* ListViewCell.swift */,
+				9CAD64B3251A343F000B0A33 /* ListViewCell.xib */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		9CC0055124BB4D88007AECEC /* XLPagerTabStrip */ = {
@@ -280,9 +327,11 @@
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
+				9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
 				9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */,
 				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
+				9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +391,16 @@
 				9CC7C3A1250CA3D80093FEBB /* TOCropViewControllerSample.swift in Sources */,
 				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
+				9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */,
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,
+				9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */,
 				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C21B82E24A879FA00658EA3 /* SceneDelegate.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
+				9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
