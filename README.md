@@ -12,5 +12,3 @@ UIKitによるUIのカタログ
 - Twitter風スクロール：[MXParallaxHeader](https://github.com/maxep/MXParallaxHeader),[Tabman](https://github.com/uias/Tabman)
 - 画像トリミング：[TOCropViewController](https://github.com/TimOliver/TOCropViewController)  
 
-####  その他
-- StackViewを用いたアコーディオンメニュー：[参考サイト](https://github.com/nRewik/UIStackViewEasyAnimation)  
