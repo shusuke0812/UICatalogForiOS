@@ -38,13 +38,6 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // AccordionMenuViewControllerへテーブルのindexを渡して画面遷移先でindexを表示させる
-        #if false
-        let s: UIStoryboard = UIStoryboard(name: "AccordionMenuViewController", bundle: nil)
-        let vc: AccordionMenuViewController = s.instantiateInitialViewController() as! AccordionMenuViewController
-        
-        vc.getPreviousPageValue = "\(indexPath.row)"
-        #endif
         
         // MXScrollViewControllerのヘッダへテーブルのindexを渡して画面遷移先でindexを表示させる
         #if true
