@@ -26,8 +26,6 @@
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
 		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
-		9CBF376F24D0280D006E304E /* AccordionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF376E24D0280D006E304E /* AccordionMenuViewController.swift */; };
-		9CBF377224D02837006E304E /* AccordionMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBF377124D02837006E304E /* AccordionMenuViewController.storyboard */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 		9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
@@ -59,8 +57,6 @@
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
-		9CBF376E24D0280D006E304E /* AccordionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionMenuViewController.swift; sourceTree = "<group>"; };
-		9CBF377124D02837006E304E /* AccordionMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccordionMenuViewController.storyboard; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TOCropViewControllerSample.storyboard; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 				9CC0055524BB4DEF007AECEC /* Common */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
-				9CBF376D24D027BE006E304E /* AccordionMenu */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -138,26 +133,9 @@
 				9CC0055624BB4E77007AECEC /* Common */,
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
-				9CBF377024D02818006E304E /* AccordionMenu */,
 				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		9CBF376D24D027BE006E304E /* AccordionMenu */ = {
-			isa = PBXGroup;
-			children = (
-				9CBF376E24D0280D006E304E /* AccordionMenuViewController.swift */,
-			);
-			path = AccordionMenu;
-			sourceTree = "<group>";
-		};
-		9CBF377024D02818006E304E /* AccordionMenu */ = {
-			isa = PBXGroup;
-			children = (
-				9CBF377124D02837006E304E /* AccordionMenuViewController.storyboard */,
-			);
-			path = AccordionMenu;
 			sourceTree = "<group>";
 		};
 		9CC0055124BB4D88007AECEC /* XLPagerTabStrip */ = {
@@ -300,7 +278,6 @@
 				9C21B83824A879FE00658EA3 /* LaunchScreen.storyboard in Resources */,
 				9C21B83524A879FE00658EA3 /* Assets.xcassets in Resources */,
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
-				9CBF377224D02837006E304E /* AccordionMenuViewController.storyboard in Resources */,
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
@@ -362,7 +339,6 @@
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
-				9CBF376F24D0280D006E304E /* AccordionMenuViewController.swift in Sources */,
 				9CC7C3A1250CA3D80093FEBB /* TOCropViewControllerSample.swift in Sources */,
 				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
