@@ -32,6 +32,8 @@
 		9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64B2251A343F000B0A33 /* ListViewCell.swift */; };
 		9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64B3251A343F000B0A33 /* ListViewCell.xib */; };
 		9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64C2251A36FD000B0A33 /* ListViewModel.swift */; };
+		9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */; };
+		9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
 		9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
@@ -69,6 +71,8 @@
 		9CAD64B2251A343F000B0A33 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		9CAD64B3251A343F000B0A33 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
 		9CAD64C2251A36FD000B0A33 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerViewController.storyboard; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TOCropViewControllerSample.storyboard; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
@@ -134,10 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				9CAD64A5251A3389000B0A33 /* ListViewController.swift */,
-				9CC7C39F250CA3BE0093FEBB /* TOCropViewController */,
 				9CC0055524BB4DEF007AECEC /* Common */,
+				9CC7C39F250CA3BE0093FEBB /* TOCropViewController */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
+				9CBAA9FA251ADD8B007CED92 /* ImageViewer */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -146,10 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */,
-				9CAD64C1251A35C6000B0A33 /* TOCropViewController */,
 				9CC0055624BB4E77007AECEC /* Common */,
+				9CAD64C1251A35C6000B0A33 /* TOCropViewController */,
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
+				9CBAA9FB251ADD9B007CED92 /* ImageViewer */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -194,6 +200,22 @@
 				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
 			);
 			path = TOCropViewController;
+			sourceTree = "<group>";
+		};
+		9CBAA9FA251ADD8B007CED92 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		9CBAA9FB251ADD9B007CED92 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */,
+			);
+			path = ImageViewer;
 			sourceTree = "<group>";
 		};
 		9CC0055124BB4D88007AECEC /* XLPagerTabStrip */ = {
@@ -339,6 +361,7 @@
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
 				9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */,
+				9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
 				9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */,
 				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
@@ -395,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */,
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
