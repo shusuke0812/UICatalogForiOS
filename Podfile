@@ -9,6 +9,7 @@ target 'UICatalogForiOS' do
 	pod 'MXParallaxHeader', '0.6.1'
 	pod 'Tabman', '1.10.02'
 	pod 'CropViewController'
+	pod 'ImageViewer'
 
   # Pods for UICatalogForiOS
 
