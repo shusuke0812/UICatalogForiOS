@@ -7,19 +7,26 @@
 //
 
 import UIKit
+import ImageViewer
+
+/*
+ * このクラスで実装されている主な機能
+ *   - 画像をタップすると拡大表示する
+ *   - （注）SceneDelegateを使うとライブラリが使えなくなる。UIApplication.swiftでクラッシュする。
+ */
 
 class ImageViewerViewController: UIViewController {
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
-    private let images: [String] = ["sample_image", "sample_image2", "sample_image3"]
+    let images: [String] = ["sample_image", "sample_image2", "sample_image3"]
+    var galleryItem: GalleryItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageCollectionView.delegate = self
         self.imageCollectionView.dataSource = self
     }
-    
 }
 
 extension ImageViewerViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -38,5 +45,41 @@ extension ImageViewerViewController: UICollectionViewDataSource, UICollectionVie
     // 写真が選択された時の処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("「\(images[indexPath.row])」が選択されました")
+        // ImageViewerを起動
+        self.openImageViewer(indexPath: indexPath)
+    }
+}
+
+extension ImageViewerViewController: GalleryItemsDataSource {
+    /// imageをタップしたらImageViewerを立ち上げる処理
+    @IBAction func didTapImage(_ sender: Any) {
+        print("DEBUG： 画像がタップされました")
+        // 拡大表示する画像をセット
+        guard let image = UIImage(named: images[0]) else { return }
+        galleryItem = GalleryItem.image { $0(image) }
+        // 拡大画像の画面へ遷移
+        let galleryVC = GalleryViewController(startIndex: 0, itemsDataSource: self, configuration: [.deleteButtonMode(.none), .seeAllCloseButtonMode(.none), .thumbnailsButtonMode(.none)])
+        self.present(galleryVC, animated: true, completion: nil)
+    }
+    /// collectionViewのimageをタップしたらImageViewerを立ち上げる処理
+    func openImageViewer(indexPath: IndexPath) {
+        // 拡大表示する画像をセット
+        let displacedView = UIImage(named: images[indexPath.row])
+        self.galleryItem = GalleryItem.image { $0(displacedView) }
+        // 拡大画像の画面へ遷移
+        let galleryVC = GalleryViewController(startIndex: indexPath.row, itemsDataSource: self, configuration: self.galleryConfiguration())
+        self.present(galleryVC, animated: true, completion: nil)
+    }
+    func galleryConfiguration() -> GalleryConfiguration {
+        return [
+            .deleteButtonMode(.none),
+            .seeAllCloseButtonMode(.none), .thumbnailsButtonMode(.none)
+        ]
+    }
+    func itemCount() -> Int {
+        return 1
+    }
+    func provideGalleryItem(_ index: Int) -> GalleryItem {
+        return galleryItem
     }
 }

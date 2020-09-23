@@ -18,11 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_image" translatesAutoresizingMaskIntoConstraints="NO" id="8To-XJ-X7e">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_image" translatesAutoresizingMaskIntoConstraints="NO" id="8To-XJ-X7e">
                                 <rect key="frame" x="87" y="179" width="240" height="128"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="jgC-Jp-tmn"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2io-YS-8Bg" appends="YES" id="r8d-Ep-Zjc"/>
+                                </connections>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldg-c3-fDE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -103,6 +107,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ced-NR-bAj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2io-YS-8Bg">
+                    <connections>
+                        <action selector="didTapImage:" destination="oeu-XW-Uig" id="lfg-NF-Mnn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="195.6521739130435" y="145.98214285714286"/>
         </scene>
