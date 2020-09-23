@@ -12,6 +12,8 @@ class ImageViewerViewController: UIViewController {
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
+    private let images: [String] = ["sample_image", "sample_image2", "sample_image3"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageCollectionView.dataSource = self
@@ -27,6 +29,9 @@ extension ImageViewerViewController: UICollectionViewDataSource {
     // 写真セル内容を設定
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionCell", for: indexPath)
+        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let cellImage = UIImage(named: images[indexPath.row])
+        imageView.image = cellImage
         return cell
     }
 }
