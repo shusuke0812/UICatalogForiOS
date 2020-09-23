@@ -52,14 +52,20 @@ extension ListViewController {
             self.transitionTOCropViewController()
         case .imageViewer:
             print("DEBUG： imageViewerがタップされました")
+            self.transitionImageViewer()
         }
     }
 }
 
 extension ListViewController {
-    func transitionTOCropViewController() {
+    private func transitionTOCropViewController() {
         let s: UIStoryboard = UIStoryboard(name: "TOCropViewControllerSample", bundle: nil)
         let vc: TOCropViewControllerSample = s.instantiateInitialViewController() as! TOCropViewControllerSample
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionImageViewer() {
+        let s: UIStoryboard = UIStoryboard(name: "ImageViewerViewController", bundle: nil)
+        let vc: ImageViewerViewController = s.instantiateInitialViewController() as! ImageViewerViewController
         self.present(vc, animated: true, completion: nil)
     }
 }
