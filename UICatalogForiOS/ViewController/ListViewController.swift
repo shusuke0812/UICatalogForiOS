@@ -49,8 +49,17 @@ extension ListViewController {
             print("DEBUG： xlpagerがタップされました")
         case .tocrop:
             print("DEBUG： tocropがタップされました")
+            self.transitionTOCropViewController()
         case .imageViewer:
             print("DEBUG： imageViewerがタップされました")
         }
+    }
+}
+
+extension ListViewController {
+    func transitionTOCropViewController() {
+        let s: UIStoryboard = UIStoryboard(name: "TOCropViewControllerSample", bundle: nil)
+        let vc: TOCropViewControllerSample = s.instantiateInitialViewController() as! TOCropViewControllerSample
+        self.present(vc, animated: true, completion: nil)
     }
 }

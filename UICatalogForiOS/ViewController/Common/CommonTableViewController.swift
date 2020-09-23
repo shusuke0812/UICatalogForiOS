@@ -17,13 +17,6 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.initRefreshControl()
         super.viewDidLoad()
     }
-    
-    @IBAction func tapButton(_ sender: Any) {
-        let s = UIStoryboard(name: "TOCropViewControllerSample", bundle: nil)
-        let vc = s.instantiateInitialViewController() as! TOCropViewControllerSample
-        self.present(vc, animated: true, completion: nil)
-    }
-    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
