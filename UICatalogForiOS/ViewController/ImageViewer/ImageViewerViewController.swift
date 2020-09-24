@@ -6,14 +6,14 @@
 //  Copyright © 2020 shusuke. All rights reserved.
 //
 
-import UIKit
-import ImageViewer
-
 /*
  * このクラスで実装されている主な機能
  *   - 画像をタップすると拡大表示する
  *   - （注）SceneDelegateを使うとライブラリが使えなくなる。UIApplication.swiftでクラッシュする。
  */
+
+import UIKit
+import ImageViewer
 
 class ImageViewerViewController: UIViewController {
     
