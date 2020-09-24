@@ -24,7 +24,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEM-Aq-qah">
-                                <rect key="frame" x="16" y="718" width="382" height="50"/>
+                                <rect key="frame" x="16" y="423" width="382" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3WR-NN-s5d"/>
@@ -40,12 +40,13 @@
                         <viewLayoutGuide key="safeArea" id="mpV-Sw-13G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MEM-Aq-qah" firstAttribute="centerY" secondItem="VkG-Za-rI8" secondAttribute="centerY" id="6mc-3G-Whj"/>
                             <constraint firstItem="MEM-Aq-qah" firstAttribute="leading" secondItem="mpV-Sw-13G" secondAttribute="leading" constant="16" id="7c3-Lw-FnD"/>
+                            <constraint firstItem="MEM-Aq-qah" firstAttribute="centerX" secondItem="VkG-Za-rI8" secondAttribute="centerX" id="LNU-DA-SeA"/>
                             <constraint firstItem="huP-wz-ci6" firstAttribute="leading" secondItem="mpV-Sw-13G" secondAttribute="leading" id="STT-UN-Wnh"/>
                             <constraint firstItem="mpV-Sw-13G" firstAttribute="trailing" secondItem="MEM-Aq-qah" secondAttribute="trailing" constant="16" id="beW-ZZ-vhk"/>
                             <constraint firstItem="huP-wz-ci6" firstAttribute="top" secondItem="mpV-Sw-13G" secondAttribute="top" id="cMm-wF-PBS"/>
                             <constraint firstItem="huP-wz-ci6" firstAttribute="trailing" secondItem="mpV-Sw-13G" secondAttribute="trailing" id="mco-Xr-Jqb"/>
-                            <constraint firstItem="MEM-Aq-qah" firstAttribute="top" secondItem="huP-wz-ci6" secondAttribute="bottom" constant="630" id="tNz-WD-7j8"/>
                         </constraints>
                     </view>
                 </viewController>
