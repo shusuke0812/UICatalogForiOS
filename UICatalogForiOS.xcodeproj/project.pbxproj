@@ -34,6 +34,8 @@
 		9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */; };
 		9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
+		9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0925A251CFF6B001CA9C4 /* PkhudViewController.swift */; };
+		9CC09260251CFF94001CA9C4 /* PkhudViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0925F251CFF94001CA9C4 /* PkhudViewController.storyboard */; };
 		9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */; };
 		9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */; };
 		9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC5303424D487DF00B5453C /* TextViewController.swift */; };
@@ -72,6 +74,8 @@
 		9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerViewController.storyboard; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
+		9CC0925A251CFF6B001CA9C4 /* PkhudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkhudViewController.swift; sourceTree = "<group>"; };
+		9CC0925F251CFF94001CA9C4 /* PkhudViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PkhudViewController.storyboard; sourceTree = "<group>"; };
 		9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TOCropViewControllerSample.storyboard; sourceTree = "<group>"; };
 		9CC5303224D47CE700B5453C /* MXParentScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXParentScrollViewController.swift; sourceTree = "<group>"; };
 		9CC5303424D487DF00B5453C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				9CC7C39F250CA3BE0093FEBB /* TOCropViewController */,
 				9CC0055424BB4DD7007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
+				9CC09259251CFF41001CA9C4 /* PKHUD */,
 				9CBAA9FA251ADD8B007CED92 /* ImageViewer */,
 			);
 			path = ViewController;
@@ -152,6 +157,7 @@
 				9CAD64C1251A35C6000B0A33 /* TOCropViewController */,
 				9CC0055224BB4D9B007AECEC /* MXParallaxHeaderAndTabman */,
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
+				9CC0925E251CFF7E001CA9C4 /* PKHUD */,
 				9CBAA9FB251ADD9B007CED92 /* ImageViewer */,
 			);
 			path = Storyboard;
@@ -274,6 +280,22 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		9CC09259251CFF41001CA9C4 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0925A251CFF6B001CA9C4 /* PkhudViewController.swift */,
+			);
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
+		9CC0925E251CFF7E001CA9C4 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0925F251CFF94001CA9C4 /* PkhudViewController.storyboard */,
+			);
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
 		9CC7C39F250CA3BE0093FEBB /* TOCropViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +376,7 @@
 				9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */,
 				9C21B83824A879FE00658EA3 /* LaunchScreen.storyboard in Resources */,
 				9C21B83524A879FE00658EA3 /* Assets.xcassets in Resources */,
+				9CC09260251CFF94001CA9C4 /* PkhudViewController.storyboard in Resources */,
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
@@ -433,6 +456,7 @@
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
 				9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */,
+				9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
