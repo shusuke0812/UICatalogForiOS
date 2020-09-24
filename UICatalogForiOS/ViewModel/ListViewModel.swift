@@ -14,6 +14,8 @@ enum ListSectionType {
     case ui
     /// 写真
     case image
+    /// インタラクション
+    case interaction
     
     internal var rows: [ListRowType] {
         switch self {
@@ -21,6 +23,8 @@ enum ListSectionType {
             return [.mxparallax, .xlpager]
         case .image:
             return [.tocrop,.imageViewer]
+        case .interaction:
+            return [.hud]
         }
     }
 }
@@ -31,6 +35,7 @@ enum ListRowType: String {
     case xlpager        = "XLPagerTabStrip"
     case tocrop         = "TOCropViewController"
     case imageViewer    = "ImageViewer"
+    case hud            = "PKHUD"
 }
 
 class ListViewModel: NSObject {
@@ -45,7 +50,7 @@ class ListViewModel: NSObject {
 
 extension ListViewModel {
     private func setSections() {
-        self.sections = [.ui, .image]
+        self.sections = [.ui, .image, .interaction]
     }
 }
 
@@ -59,12 +64,18 @@ extension ListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionType: ListSectionType = self.sections[indexPath.section]
         switch sectionType {
+        // TODO： セル生成のコードが重複しているのでうまくまとめる方法を考える
         case .ui:
             let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
             let rowType: ListRowType = sectionType.rows[indexPath.row]
             cell.titleLabel.text = rowType.rawValue
             return cell
         case .image:
+            let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
+            let rowType: ListRowType = sectionType.rows[indexPath.row]
+            cell.titleLabel.text = rowType.rawValue
+            return cell
+        case .interaction:
             let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
             let rowType: ListRowType = sectionType.rows[indexPath.row]
             cell.titleLabel.text = rowType.rawValue

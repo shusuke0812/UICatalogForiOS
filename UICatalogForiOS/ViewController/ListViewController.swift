@@ -38,6 +38,8 @@ extension ListViewController {
             return 50
         case .image:
             return 50
+        case .interaction:
+            return 50
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,11 +55,15 @@ extension ListViewController {
         case .imageViewer:
             print("DEBUG： imageViewerがタップされました")
             self.transitionImageViewer()
+        case .hud:
+            print("DEBUG： pkhudがタップされました")
+            self.transitionPkHud()
         }
     }
 }
 
 extension ListViewController {
+    // TODO： VC生成のコードが重複しているのでうまくまとめる方法を考える
     private func transitionTOCropViewController() {
         let s: UIStoryboard = UIStoryboard(name: "TOCropViewControllerSample", bundle: nil)
         let vc: TOCropViewControllerSample = s.instantiateInitialViewController() as! TOCropViewControllerSample
@@ -66,6 +72,11 @@ extension ListViewController {
     private func transitionImageViewer() {
         let s: UIStoryboard = UIStoryboard(name: "ImageViewerViewController", bundle: nil)
         let vc: ImageViewerViewController = s.instantiateInitialViewController() as! ImageViewerViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionPkHud() {
+        let s: UIStoryboard = UIStoryboard(name: "PkhudViewController", bundle: nil)
+        let vc: PkhudViewController = s.instantiateInitialViewController() as! PkhudViewController
         self.present(vc, animated: true, completion: nil)
     }
 }
