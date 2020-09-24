@@ -14,4 +14,7 @@ class PkhudViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    // MARK: - Action Method
+    @IBAction func startHudButton(_ sender: Any) {
+    }
 }
