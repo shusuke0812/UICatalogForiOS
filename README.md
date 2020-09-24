@@ -11,4 +11,4 @@ UIKitによるUIのカタログ
 - 上部タブのページ切替：[XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)  
 - Twitter風スクロール：[MXParallaxHeader](https://github.com/maxep/MXParallaxHeader),[Tabman](https://github.com/uias/Tabman)
 - 画像トリミング：[TOCropViewController](https://github.com/TimOliver/TOCropViewController)  
-
+- HU(Head Up Display)：[PKHUD](https://github.com/pkluz/PKHUD)

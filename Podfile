@@ -10,6 +10,7 @@ target 'UICatalogForiOS' do
 	pod 'Tabman', '1.10.02'
 	pod 'CropViewController'
 	pod 'ImageViewer'
+	pod 'PKHUD', '~> 5.0'
 
   # Pods for UICatalogForiOS
 
