@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewerOnTableViewBase: UIView {
+class ImageViewerOnTableViewBaseView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewWithCollectionView: UITableView!

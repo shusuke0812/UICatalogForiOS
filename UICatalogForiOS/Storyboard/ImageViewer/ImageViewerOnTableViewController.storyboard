@@ -13,7 +13,7 @@
         <scene sceneID="7rZ-n0-UMB">
             <objects>
                 <viewController id="bPi-2G-9ph" customClass="ImageViewerOnTableViewController" customModule="UICatalogForiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ttc-HZ-tgY" customClass="ImageViewerOnTableViewBase" customModule="UICatalogForiOS" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="Ttc-HZ-tgY" customClass="ImageViewerOnTableViewBaseView" customModule="UICatalogForiOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
