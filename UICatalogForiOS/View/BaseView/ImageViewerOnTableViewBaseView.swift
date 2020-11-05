@@ -8,6 +8,12 @@
 
 import UIKit
 
+/// TableViewType
+enum TableViewTag: Int {
+    case normal             = 0
+    case withCollectionView = 1
+}
+
 class ImageViewerOnTableViewBaseView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,12 +21,13 @@ class ImageViewerOnTableViewBaseView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.setTableView()
     }
 }
 // MARK: - Initialized Method
 extension ImageViewerOnTableViewBaseView {
     private func setTableView() {
-        self.tableView.tag = 0
-        self.tableViewWithCollectionView.tag = 1
+        self.tableView.tag = TableViewTag.normal.rawValue
+        self.tableViewWithCollectionView.tag = TableViewTag.withCollectionView.rawValue
     }
 }
