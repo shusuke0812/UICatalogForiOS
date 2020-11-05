@@ -22,7 +22,7 @@ enum ListSectionType {
         case .ui:
             return [.mxparallax, .xlpager]
         case .image:
-            return [.tocrop,.imageViewer]
+            return [.tocrop, .imageViewer, .imageViewerOnTableView]
         case .interaction:
             return [.hud]
         }
@@ -31,11 +31,12 @@ enum ListSectionType {
 
 /// 各セクションのセル
 enum ListRowType: String {
-    case mxparallax     = "MXParallaxHeaderAndTabman"
-    case xlpager        = "XLPagerTabStrip"
-    case tocrop         = "TOCropViewController"
-    case imageViewer    = "ImageViewer"
-    case hud            = "PKHUD"
+    case mxparallax             = "MXParallaxHeaderAndTabman"
+    case xlpager                = "XLPagerTabStrip"
+    case tocrop                 = "TOCropViewController"
+    case imageViewer            = "ImageViewer"
+    case imageViewerOnTableView = "ImageViewer(on TableView)"
+    case hud                    = "PKHUD"
 }
 
 class ListViewModel: NSObject {

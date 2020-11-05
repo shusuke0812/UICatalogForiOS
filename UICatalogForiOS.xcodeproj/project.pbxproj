@@ -21,6 +21,8 @@
 		9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */; };
 		9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */; };
 		9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */; };
+		9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A7E2553AA98005A1814 /* ImageViewerOnTableViewController.swift */; };
+		9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */; };
 		9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */; };
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
@@ -61,6 +63,8 @@
 		9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedInfoTabChildViewController.swift; sourceTree = "<group>"; };
 		9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedFavoriteTabChildViewController.storyboard; sourceTree = "<group>"; };
 		9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedInfoTabChildViewController.storyboard; sourceTree = "<group>"; };
+		9C8A1A7E2553AA98005A1814 /* ImageViewerOnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOnTableViewController.swift; sourceTree = "<group>"; };
+		9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerOnTableViewController.storyboard; sourceTree = "<group>"; };
 		9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterScrollViewController.storyboard; sourceTree = "<group>"; };
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */,
+				9C8A1A7E2553AA98005A1814 /* ImageViewerOnTableViewController.swift */,
 			);
 			path = ImageViewer;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */,
+				9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */,
 			);
 			path = ImageViewer;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
 				9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */,
+				9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */,
 				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
 				9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */,
 			);
@@ -452,6 +459,7 @@
 				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
+				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,

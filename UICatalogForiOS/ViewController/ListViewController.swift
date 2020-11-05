@@ -60,6 +60,9 @@ extension ListViewController: UITableViewDelegate {
         case .imageViewer:
             print("DEBUG： imageViewerがタップされました")
             self.transitionImageViewer()
+        case .imageViewerOnTableView:
+            print("DEBUG： imageViewerOnTableviewがタップされました")
+            self.transitionImageViewerOnTableView()
         case .hud:
             print("DEBUG： pkhudがタップされました")
             self.transitionPkHud()
@@ -77,6 +80,11 @@ extension ListViewController {
     private func transitionImageViewer() {
         let s: UIStoryboard = UIStoryboard(name: "ImageViewerViewController", bundle: nil)
         let vc: ImageViewerViewController = s.instantiateInitialViewController() as! ImageViewerViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionImageViewerOnTableView() {
+        let s: UIStoryboard = UIStoryboard(name: "ImageViewerOnTableViewController", bundle: nil)
+        let vc: ImageViewerOnTableViewController = s.instantiateInitialViewController() as! ImageViewerOnTableViewController
         self.present(vc, animated: true, completion: nil)
     }
     private func transitionPkHud() {
