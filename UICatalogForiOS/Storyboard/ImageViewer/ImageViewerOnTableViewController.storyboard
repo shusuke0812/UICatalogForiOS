@@ -32,12 +32,12 @@
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-HV-1KR">
                                 <rect key="frame" x="16" y="103" width="382" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CbB-Pt-Jzs">
-                                <rect key="frame" x="0.0" y="129" width="414" height="303.5"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="293.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UaL-Vc-2La">
@@ -66,7 +66,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableView With CollectionView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nge-lI-R3M">
                                 <rect key="frame" x="16" y="437.5" width="382" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,7 +85,7 @@
                             <constraint firstItem="RYf-VF-gW3" firstAttribute="bottom" secondItem="V3n-ZQ-QeI" secondAttribute="bottom" id="RQN-A0-puv"/>
                             <constraint firstItem="PgA-HV-1KR" firstAttribute="leading" secondItem="RYf-VF-gW3" secondAttribute="leading" constant="16" id="Vaw-jh-DaA"/>
                             <constraint firstItem="mNk-sF-uv0" firstAttribute="trailing" secondItem="RYf-VF-gW3" secondAttribute="trailing" id="WZ4-l3-DFQ"/>
-                            <constraint firstItem="Nge-lI-R3M" firstAttribute="top" secondItem="CbB-Pt-Jzs" secondAttribute="bottom" constant="5" id="Y92-YN-EKa"/>
+                            <constraint firstItem="Nge-lI-R3M" firstAttribute="top" secondItem="CbB-Pt-Jzs" secondAttribute="bottom" constant="15" id="Y92-YN-EKa"/>
                             <constraint firstItem="RYf-VF-gW3" firstAttribute="trailing" secondItem="V3n-ZQ-QeI" secondAttribute="trailing" id="bD2-4Z-b05"/>
                             <constraint firstItem="V3n-ZQ-QeI" firstAttribute="top" secondItem="Nge-lI-R3M" secondAttribute="bottom" constant="5" id="dRy-Ob-hQE"/>
                             <constraint firstItem="mNk-sF-uv0" firstAttribute="top" secondItem="RYf-VF-gW3" secondAttribute="top" id="pLI-aX-mzw"/>
