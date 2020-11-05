@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Static {
+    struct CellId {
+        static let normal = "ImageViewerCell"
+        static let withCollectionView = "ImageViewerCollectionViewCell"
+    }
+}
