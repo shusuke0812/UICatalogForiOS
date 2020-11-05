@@ -15,14 +15,15 @@ class ListViewController: UIViewController {
     private var viewModel: ListViewModel!
     
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel = ListViewModel()
         self.setBaseView()
     }
 }
-
-extension ListViewController: UITableViewDelegate {
+// MARK: - Initialized Method
+extension ListViewController {
     private func setBaseView() {
         self.baseView.tableView.tableFooterView = UIView()
         self.baseView.tableView.delegate = self
@@ -30,7 +31,8 @@ extension ListViewController: UITableViewDelegate {
     }
 }
 
-extension ListViewController {
+// MARK: - TableView Delegate Methop
+extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType: ListSectionType = self.viewModel.sections[indexPath.section]
         switch  sectionType {
@@ -43,6 +45,9 @@ extension ListViewController {
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        self.baseView.tableView.deselectRow(at: indexPath, animated: true)
+        // セル選択後の処理
         let sectionRowType: ListRowType = self.viewModel.sections[indexPath.section].rows[indexPath.row]
         switch sectionRowType {
         case .mxparallax:
@@ -61,7 +66,7 @@ extension ListViewController {
         }
     }
 }
-
+// MARK: - Other Private Method
 extension ListViewController {
     // TODO： VC生成のコードが重複しているのでうまくまとめる方法を考える
     private func transitionTOCropViewController() {
