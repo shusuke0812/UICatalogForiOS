@@ -15,7 +15,7 @@ class ImageViewerOnTableViewModel: NSObject {
 extension ImageViewerOnTableViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("")
-        return 10
+        return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = self.checkTableViewKind(tableView)
@@ -28,10 +28,10 @@ extension ImageViewerOnTableViewModel {
         var cellIdentifier: String
         switch tableView.tag {
         case TableViewTag.normal.rawValue:
-            cellIdentifier = ""
+            cellIdentifier = Static.CellId.normal
             return cellIdentifier
         case TableViewTag.withCollectionView.rawValue:
-            cellIdentifier = ""
+            cellIdentifier = Static.CellId.withCollectionView
             return cellIdentifier
         default:
             return ""
