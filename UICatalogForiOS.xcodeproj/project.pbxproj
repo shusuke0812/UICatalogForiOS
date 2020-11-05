@@ -25,6 +25,11 @@
 		9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */; };
 		9C8A1A852553B088005A1814 /* ImageViewerOnTableViewBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A842553B088005A1814 /* ImageViewerOnTableViewBaseView.swift */; };
 		9C8A1A952553BF7F005A1814 /* ImageViewerOnTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A942553BF7F005A1814 /* ImageViewerOnTableViewModel.swift */; };
+		9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A972553CFF0005A1814 /* ImageViewerCell.swift */; };
+		9C8A1A9A2553CFF0005A1814 /* ImageViewerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A1A982553CFF0005A1814 /* ImageViewerCell.xib */; };
+		9C8A1A9E2553D12B005A1814 /* ImageViewerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A9C2553D12B005A1814 /* ImageViewerCollectionViewCell.swift */; };
+		9C8A1A9F2553D12B005A1814 /* ImageViewerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A1A9D2553D12B005A1814 /* ImageViewerCollectionViewCell.xib */; };
+		9C8A1AA52553D49F005A1814 /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1AA42553D49F005A1814 /* Static.swift */; };
 		9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */; };
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
@@ -69,6 +74,11 @@
 		9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerOnTableViewController.storyboard; sourceTree = "<group>"; };
 		9C8A1A842553B088005A1814 /* ImageViewerOnTableViewBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOnTableViewBaseView.swift; sourceTree = "<group>"; };
 		9C8A1A942553BF7F005A1814 /* ImageViewerOnTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOnTableViewModel.swift; sourceTree = "<group>"; };
+		9C8A1A972553CFF0005A1814 /* ImageViewerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerCell.swift; sourceTree = "<group>"; };
+		9C8A1A982553CFF0005A1814 /* ImageViewerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerCell.xib; sourceTree = "<group>"; };
+		9C8A1A9C2553D12B005A1814 /* ImageViewerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C8A1A9D2553D12B005A1814 /* ImageViewerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerCollectionViewCell.xib; sourceTree = "<group>"; };
+		9C8A1AA42553D49F005A1814 /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
 		9C8E9FB824AF6C0100593CB0 /* TwitterScrollViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwitterScrollViewController.storyboard; sourceTree = "<group>"; };
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 		9C21B82A24A879FA00658EA3 /* UICatalogForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C8A1AA32553D48D005A1814 /* Static */,
 				9CAD64AC251A33E2000B0A33 /* ViewModel */,
 				9CAD64AB251A33DC000B0A33 /* View */,
 				9C21B84224A883D100658EA3 /* Storyboard */,
@@ -171,6 +182,25 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		9C8A1AA12553D135005A1814 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				9C8A1A972553CFF0005A1814 /* ImageViewerCell.swift */,
+				9C8A1A982553CFF0005A1814 /* ImageViewerCell.xib */,
+				9C8A1A9C2553D12B005A1814 /* ImageViewerCollectionViewCell.swift */,
+				9C8A1A9D2553D12B005A1814 /* ImageViewerCollectionViewCell.xib */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		9C8A1AA32553D48D005A1814 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				9C8A1AA42553D49F005A1814 /* Static.swift */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		9CAD64AB251A33DC000B0A33 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +231,7 @@
 		9CAD64AE251A33FE000B0A33 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				9C8A1AA12553D135005A1814 /* ImageViewer */,
 				9CAD64B2251A343F000B0A33 /* ListViewCell.swift */,
 				9CAD64B3251A343F000B0A33 /* ListViewCell.xib */,
 			);
@@ -395,10 +426,12 @@
 				9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */,
 				9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
+				9C8A1A9F2553D12B005A1814 /* ImageViewerCollectionViewCell.xib in Resources */,
 				9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */,
 				9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */,
 				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
 				9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */,
+				9C8A1A9A2553CFF0005A1814 /* ImageViewerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +494,7 @@
 				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
 				9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */,
+				9C8A1A9E2553D12B005A1814 /* ImageViewerCollectionViewCell.swift in Sources */,
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,
 				9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */,
 				9C8A1A952553BF7F005A1814 /* ImageViewerOnTableViewModel.swift in Sources */,
@@ -468,11 +502,13 @@
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
+				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
 				9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */,
 				9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */,
+				9C8A1AA52553D49F005A1814 /* Static.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
