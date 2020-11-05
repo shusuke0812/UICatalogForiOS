@@ -18,6 +18,9 @@ class ImageViewerOnTableViewBaseView: UIView {
     }
 }
 // MARK: - Initialized Method
-extension ImageViewerOnTableViewController {
-    
+extension ImageViewerOnTableViewBaseView {
+    private func setTableView() {
+        self.tableView.tag = 0
+        self.tableViewWithCollectionView.tag = 1
+    }
 }
