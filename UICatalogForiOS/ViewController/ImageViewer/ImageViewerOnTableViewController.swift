@@ -17,8 +17,9 @@ class ImageViewerOnTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUIControl()
         self.viewModel = ImageViewerOnTableViewModel()
+        self.setUIControl()
+        self.setTableView()
     }
     // MARK: - Action Method
     @IBAction func didTapCloseButton(_ sender: Any) {
@@ -39,5 +40,10 @@ extension ImageViewerOnTableViewController: UITableViewDelegate {
         self.baseView.tableView.dataSource = self.viewModel
         self.baseView.tableViewWithCollectionView.delegate = self
         self.baseView.tableViewWithCollectionView.dataSource = self.viewModel
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        self.baseView.tableView.deselectRow(at: indexPath, animated: true)
+        self.baseView.tableViewWithCollectionView.deselectRow(at: indexPath, animated: true)
     }
 }
