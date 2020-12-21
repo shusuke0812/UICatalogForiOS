@@ -10,15 +10,19 @@ import UIKit
 
 class ImageViewerCollectionViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.setUI()
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+}
+// MARK: - Initialized Method
+extension ImageViewerCollectionViewCell {
+    private func setUI() {
+        self.titleLabel.text = "画像をタップすると拡大"
+    }
 }
