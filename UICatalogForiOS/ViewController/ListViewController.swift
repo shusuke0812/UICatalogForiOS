@@ -42,6 +42,8 @@ extension ListViewController: UITableViewDelegate {
             return 50
         case .interaction:
             return 50
+        case .networking:
+            return 50
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,6 +68,8 @@ extension ListViewController: UITableViewDelegate {
         case .hud:
             print("DEBUG： pkhudがタップされました")
             self.transitionPkHud()
+        case .alamofire:
+            print("DEBUG： alamofireがタップされました")
         }
     }
 }

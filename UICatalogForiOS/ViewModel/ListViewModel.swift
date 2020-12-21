@@ -16,6 +16,8 @@ enum ListSectionType {
     case image
     /// インタラクション
     case interaction
+    /// ネットワーク
+    case networking
     
     internal var rows: [ListRowType] {
         switch self {
@@ -25,6 +27,8 @@ enum ListSectionType {
             return [.tocrop, .imageViewer, .imageViewerOnTableView]
         case .interaction:
             return [.hud]
+        case .networking:
+            return [.alamofire]
         }
     }
 }
@@ -37,6 +41,7 @@ enum ListRowType: String {
     case imageViewer            = "ImageViewer"
     case imageViewerOnTableView = "ImageViewer(on TableView)"
     case hud                    = "PKHUD"
+    case alamofire              = "Alamofire"
 }
 
 class ListViewModel: NSObject {
@@ -51,7 +56,7 @@ class ListViewModel: NSObject {
 
 extension ListViewModel {
     private func setSections() {
-        self.sections = [.ui, .image, .interaction]
+        self.sections = [.ui, .image, .interaction, .networking]
     }
 }
 
@@ -77,6 +82,11 @@ extension ListViewModel: UITableViewDataSource {
             cell.titleLabel.text = rowType.rawValue
             return cell
         case .interaction:
+            let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
+            let rowType: ListRowType = sectionType.rows[indexPath.row]
+            cell.titleLabel.text = rowType.rawValue
+            return cell
+        case .networking:
             let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
             let rowType: ListRowType = sectionType.rows[indexPath.row]
             cell.titleLabel.text = rowType.rawValue
