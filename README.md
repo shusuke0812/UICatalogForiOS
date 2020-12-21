@@ -6,10 +6,12 @@ iOSアプリ開発用のライブラリ集
 - pod version 1.9.1
 - MacOS Catalina version 10.15.4
 
-## 参考文献
-#### ライブラリ
-- 上部タブのページ切替：[XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)  
-- Twitter風スクロール：[MXParallaxHeader](https://github.com/maxep/MXParallaxHeader),[Tabman](https://github.com/uias/Tabman)
-- 画像トリミング：[TOCropViewController](https://github.com/TimOliver/TOCropViewController)  
-- HUD(Head Up Display)：[PKHUD](https://github.com/pkluz/PKHUD)
-- 画像拡大表示：[ImageViewer](https://github.com/Krisiacik/ImageViewer)
+## ライブラリ
+- UI
+  - 上部タブのページ切替：[XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)  
+  - Twitter風スクロール：[MXParallaxHeader](https://github.com/maxep/MXParallaxHeader),[Tabman](https://github.com/uias/Tabman)
+  - 画像トリミング：[TOCropViewController](https://github.com/TimOliver/TOCropViewController)  
+  - HUD(Head Up Display)：[PKHUD](https://github.com/pkluz/PKHUD)
+  - 画像拡大表示：[ImageViewer](https://github.com/Krisiacik/ImageViewer)
+- Networkng
+  - API通信：[Alamofire](https://github.com/Alamofire/Alamofire)
