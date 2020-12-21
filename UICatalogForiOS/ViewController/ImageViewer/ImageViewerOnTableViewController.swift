@@ -36,10 +36,13 @@ extension ImageViewerOnTableViewController {
 // MARK: - TableView Delegate Method
 extension ImageViewerOnTableViewController: UITableViewDelegate {
     private func setTableView() {
+        // デリゲート
         self.baseView.tableView.delegate = self
         self.baseView.tableView.dataSource = self.viewModel
         self.baseView.tableViewWithCollectionView.delegate = self
         self.baseView.tableViewWithCollectionView.dataSource = self.viewModel
+        // セル選択無効化
+        self.baseView.tableView.allowsSelection = false
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
