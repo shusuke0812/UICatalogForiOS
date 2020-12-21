@@ -11,6 +11,7 @@ target 'UICatalogForiOS' do
 	pod 'CropViewController'
 	pod 'ImageViewer'
 	pod 'PKHUD', '~> 5.0'
+	pod 'Alamofire', '~> 5.2'
 
   # Pods for UICatalogForiOS
 
