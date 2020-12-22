@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		306694AEFC47862F54163E4F /* Pods_UICatalogForiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464D5D6401823741BD93310 /* Pods_UICatalogForiOS.framework */; };
+		9C04D5B32591676E0021BB2C /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */; };
+		9C04D5B72591679C0021BB2C /* AlamofireViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04D5B62591679C0021BB2C /* AlamofireViewController.storyboard */; };
+		9C04D5BB259168580021BB2C /* AlamofireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5BA259168580021BB2C /* AlamofireViewModel.swift */; };
+		9C04D5BF259169300021BB2C /* GoogleSpreadSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */; };
+		9C04D5C425916AF10021BB2C /* GoogleSpreadSheetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */; };
 		9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C154BB924D3FD2900507DF6 /* CommonTableViewController.storyboard */; };
 		9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C154BBB24D3FFFF00507DF6 /* CommonTableViewController.swift */; };
 		9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B82B24A879FA00658EA3 /* AppDelegate.swift */; };
@@ -55,6 +60,11 @@
 		066D05F15D64CF7AF281F164 /* Pods-UICatalogForiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalogForiOS.debug.xcconfig"; path = "Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2464D5D6401823741BD93310 /* Pods_UICatalogForiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICatalogForiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37037662F05A248BEB1FBBF9 /* Pods-UICatalogForiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICatalogForiOS.release.xcconfig"; path = "Target Support Files/Pods-UICatalogForiOS/Pods-UICatalogForiOS.release.xcconfig"; sourceTree = "<group>"; };
+		9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		9C04D5B62591679C0021BB2C /* AlamofireViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlamofireViewController.storyboard; sourceTree = "<group>"; };
+		9C04D5BA259168580021BB2C /* AlamofireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewModel.swift; sourceTree = "<group>"; };
+		9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSpreadSheet.swift; sourceTree = "<group>"; };
+		9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSpreadSheetRepository.swift; sourceTree = "<group>"; };
 		9C154BB924D3FD2900507DF6 /* CommonTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonTableViewController.storyboard; sourceTree = "<group>"; };
 		9C154BBB24D3FFFF00507DF6 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		9C21B82824A879FA00658EA3 /* UICatalogForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalogForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +130,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C04D5B5259167880021BB2C /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9C04D5B62591679C0021BB2C /* AlamofireViewController.storyboard */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9C04D5BD2591691D0021BB2C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9C04D5C225916ADC0021BB2C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		9C21B81F24A879FA00658EA3 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +175,8 @@
 		9C21B82A24A879FA00658EA3 /* UICatalogForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C04D5C225916ADC0021BB2C /* Repository */,
+				9C04D5BD2591691D0021BB2C /* Entity */,
 				9C8A1AA32553D48D005A1814 /* Static */,
 				9CAD64AC251A33E2000B0A33 /* ViewModel */,
 				9CAD64AB251A33DC000B0A33 /* View */,
@@ -164,6 +200,7 @@
 				9CC0055324BB4DC3007AECEC /* XLPagerTabStrip */,
 				9CC09259251CFF41001CA9C4 /* PKHUD */,
 				9CBAA9FA251ADD8B007CED92 /* ImageViewer */,
+				9C799E362590D98200FFD85E /* Alamofire */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -178,8 +215,17 @@
 				9CC0055124BB4D88007AECEC /* XLPagerTabStrip */,
 				9CC0925E251CFF7E001CA9C4 /* PKHUD */,
 				9CBAA9FB251ADD9B007CED92 /* ImageViewer */,
+				9C04D5B5259167880021BB2C /* Alamofire */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9C799E362590D98200FFD85E /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */,
+			);
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		9C8A1AA12553D135005A1814 /* ImageViewer */ = {
@@ -215,6 +261,7 @@
 			children = (
 				9CAD64C2251A36FD000B0A33 /* ListViewModel.swift */,
 				9C8A1A942553BF7F005A1814 /* ImageViewerOnTableViewModel.swift */,
+				9C04D5BA259168580021BB2C /* AlamofireViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -430,6 +477,7 @@
 				9C8E9FB924AF6C0100593CB0 /* TwitterScrollViewController.storyboard in Resources */,
 				9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */,
 				9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */,
+				9C04D5B72591679C0021BB2C /* AlamofireViewController.storyboard in Resources */,
 				9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */,
 				9C8A1A9A2553CFF0005A1814 /* ImageViewerCell.xib in Resources */,
 			);
@@ -487,6 +535,8 @@
 				9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */,
 				9C8A1A852553B088005A1814 /* ImageViewerOnTableViewBaseView.swift in Sources */,
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
+				9C04D5C425916AF10021BB2C /* GoogleSpreadSheetRepository.swift in Sources */,
+				9C04D5B32591676E0021BB2C /* AlamofireViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */,
 				9C21B84124A8812300658EA3 /* ChangedTabViewController.swift in Sources */,
@@ -502,10 +552,12 @@
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
+				9C04D5BF259169300021BB2C /* GoogleSpreadSheet.swift in Sources */,
 				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
+				9C04D5BB259168580021BB2C /* AlamofireViewModel.swift in Sources */,
 				9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */,
 				9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */,
 				9C8A1AA52553D49F005A1814 /* Static.swift in Sources */,
