@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.4.1)
   - AutoInsetter (1.3.0)
   - CropViewController (2.5.4)
+  - HorizonCalendar (1.6.5)
   - ImageViewer (6.0.0)
   - MXParallaxHeader (0.6.1)
   - Pageboy (2.6.1)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - CropViewController
+  - HorizonCalendar
   - ImageViewer
   - MXParallaxHeader (= 0.6.1)
   - PKHUD (~> 5.0)
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Alamofire
     - AutoInsetter
     - CropViewController
+    - HorizonCalendar
     - ImageViewer
     - MXParallaxHeader
     - Pageboy
@@ -36,6 +39,7 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AutoInsetter: 0ea4dddc17042ab45114ec5d5980764efae98584
   CropViewController: 980df34ffc499db89755b2f307f20eca00cd40c6
+  HorizonCalendar: bf90307200232779094ef5b85cb09a30a029c60a
   ImageViewer: cb88ef1c0ba19161bc10702adfdcebc116a7a59d
   MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
   Pageboy: c2a25d1c280e9b622014b692626f1ff9298e0ad2
@@ -43,6 +47,6 @@ SPEC CHECKSUMS:
   Tabman: 6cff148419c5d8812d0e9f08f93b6f1c6ba54502
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: d4299d6cd18f6a4bd57cd34727c7e2b47c8d007d
+PODFILE CHECKSUM: 9117305933f9efc32227e7bedaf9dc06b476d45e
 
 COCOAPODS: 1.9.3

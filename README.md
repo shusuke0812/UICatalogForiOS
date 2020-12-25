@@ -13,5 +13,6 @@ iOSアプリ開発用のライブラリ集
   - 画像トリミング：[TOCropViewController](https://github.com/TimOliver/TOCropViewController)  
   - HUD(Head Up Display)：[PKHUD](https://github.com/pkluz/PKHUD)
   - 画像拡大表示：[ImageViewer](https://github.com/Krisiacik/ImageViewer)
+  - カレンダー：[HorizonCalendar](https://github.com/airbnb/HorizonCalendar)
 - Networkng
   - API通信：[Alamofire](https://github.com/Alamofire/Alamofire)
