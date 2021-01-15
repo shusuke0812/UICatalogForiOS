@@ -13,6 +13,7 @@ target 'UICatalogForiOS' do
 	pod 'PKHUD', '~> 5.0'
 	pod 'HorizonCalendar'
 	pod 'Alamofire', '~> 5.2'
+	pod 'Toast-Swift', '~> 5.0.1'
 
   # Pods for UICatalogForiOS
 
