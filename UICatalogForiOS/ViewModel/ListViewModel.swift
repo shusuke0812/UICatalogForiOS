@@ -26,7 +26,7 @@ enum ListSectionType {
         case .image:
             return [.tocrop, .imageViewer, .imageViewerOnTableView]
         case .interaction:
-            return [.hud]
+            return [.hud, .toast]
         case .networking:
             return [.alamofire]
         }
@@ -42,6 +42,7 @@ enum ListRowType: String {
     case imageViewerOnTableView = "ImageViewer(on TableView)"
     case hud                    = "PKHUD"
     case alamofire              = "Alamofire"
+    case toast                   = "Toast"
 }
 
 class ListViewModel: NSObject {

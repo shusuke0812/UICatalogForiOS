@@ -68,6 +68,9 @@ extension ListViewController: UITableViewDelegate {
         case .hud:
             print("DEBUG： pkhudがタップされました")
             self.transitionPkHud()
+        case .toast:
+            print("DEBUG: toastがタップされました")
+            self.transitionToast()
         case .alamofire:
             print("DEBUG： alamofireがタップされました")
         }
@@ -94,6 +97,11 @@ extension ListViewController {
     private func transitionPkHud() {
         let s: UIStoryboard = UIStoryboard(name: "PkhudViewController", bundle: nil)
         let vc: PkhudViewController = s.instantiateInitialViewController() as! PkhudViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionToast() {
+        let s: UIStoryboard = UIStoryboard(name: "ToastViewController", bundle: nil)
+        let vc: ToastViewController = s.instantiateInitialViewController() as! ToastViewController
         self.present(vc, animated: true, completion: nil)
     }
 }
