@@ -21,6 +21,9 @@ class ToastViewController: UIViewController {
     @IBAction func didTapTextImageButton(_ sender: Any) {
         self.showTextAndImageToast()
     }
+    @IBAction func didTapActivityButton(_ sender: Any) {
+        self.showActivityToast()
+    }
 }
 // MARK: - Private Method
 extension ToastViewController {
@@ -34,6 +37,12 @@ extension ToastViewController {
             } else {
                 print("DEBUG: 画像付きトーストがタップされませんでした")
             }
+        }
+    }
+    private func showActivityToast() {
+        self.view.makeToastActivity(.center)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.view.hideToastActivity()
         }
     }
 }

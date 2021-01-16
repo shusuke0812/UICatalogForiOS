@@ -49,6 +49,19 @@
                                     <action selector="didTapTextImageButton:" destination="pHI-sa-bFf" eventType="touchUpInside" id="2hq-V4-0F7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKR-kO-p66">
+                                <rect key="frame" x="16" y="388" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="akC-1H-OM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Activity"/>
+                                <connections>
+                                    <action selector="didTapActivityButton:" destination="pHI-sa-bFf" eventType="touchUpInside" id="6aC-ux-Uyn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNZ-fo-bFL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,8 +69,11 @@
                             <constraint firstItem="Ele-G9-y0c" firstAttribute="top" secondItem="doV-wc-3gU" secondAttribute="bottom" constant="100" id="0mW-UW-H3i"/>
                             <constraint firstItem="CgN-G3-PzH" firstAttribute="top" secondItem="Ele-G9-y0c" secondAttribute="bottom" constant="60" id="6wO-aC-xIo"/>
                             <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="Ele-G9-y0c" secondAttribute="trailing" constant="16" id="7wV-Cx-Re4"/>
+                            <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="kKR-kO-p66" secondAttribute="trailing" constant="16" id="9eT-xL-cGX"/>
+                            <constraint firstItem="kKR-kO-p66" firstAttribute="top" secondItem="CgN-G3-PzH" secondAttribute="bottom" constant="60" id="G0l-Ms-R8U"/>
                             <constraint firstItem="Ele-G9-y0c" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="Mlh-wL-jgs"/>
                             <constraint firstItem="doV-wc-3gU" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" id="QSj-da-bln"/>
+                            <constraint firstItem="kKR-kO-p66" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="bjE-8U-nAh"/>
                             <constraint firstItem="CgN-G3-PzH" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="dAA-kV-azM"/>
                             <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="CgN-G3-PzH" secondAttribute="trailing" constant="16" id="qEn-qu-o3Q"/>
                             <constraint firstItem="doV-wc-3gU" firstAttribute="top" secondItem="lNZ-fo-bFL" secondAttribute="top" id="qbE-AJ-uFp"/>
@@ -76,6 +92,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
