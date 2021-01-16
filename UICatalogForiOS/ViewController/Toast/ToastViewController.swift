@@ -7,10 +7,33 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class ToastViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    // MARK: - Action Method
+    @IBAction func didTapTextButton(_ sender: Any) {
+        self.showTextToast()
+    }
+    @IBAction func didTapTextImageButton(_ sender: Any) {
+        self.showTextAndImageToast()
+    }
+}
+// MARK: - Private Method
+extension ToastViewController {
+    private func showTextToast() {
+        self.view.makeToast("Hello World !!", duration: 1.0, position: .bottom)
+    }
+    private func showTextAndImageToast() {
+        self.view.makeToast("Hello World !!", duration: 1.0, position: .bottom, title: "画像付きトースト", image: UIImage(named: "sample_image")) { didTap in
+            if didTap {
+                print("DEBUG: 画像付きトーストがタップされました")
+            } else {
+                print("DEBUG: 画像付きトーストがタップされませんでした")
+            }
+        }
     }
 }
