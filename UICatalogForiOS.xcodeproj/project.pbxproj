@@ -41,6 +41,8 @@
 		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
 		9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */; };
 		9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */; };
+		9CA6513A25B26546004F45D1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513925B26546004F45D1 /* ToastViewController.swift */; };
+		9CA6513E25B2655D004F45D1 /* ToastViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513D25B2655D004F45D1 /* ToastViewController.storyboard */; };
 		9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64A5251A3389000B0A33 /* ListViewController.swift */; };
 		9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */; };
 		9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64AF251A3417000B0A33 /* ListBaseView.swift */; };
@@ -97,6 +99,8 @@
 		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireTableViewCell.xib; sourceTree = "<group>"; };
+		9CA6513925B26546004F45D1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
+		9CA6513D25B2655D004F45D1 /* ToastViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToastViewController.storyboard; sourceTree = "<group>"; };
 		9CAD64A5251A3389000B0A33 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		9CAD64AF251A3417000B0A33 /* ListBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBaseView.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				9CC09259251CFF41001CA9C4 /* PKHUD */,
 				9CBAA9FA251ADD8B007CED92 /* ImageViewer */,
 				9C799E362590D98200FFD85E /* Alamofire */,
+				9CA6513725B26506004F45D1 /* Toast */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				9CC0925E251CFF7E001CA9C4 /* PKHUD */,
 				9CBAA9FB251ADD9B007CED92 /* ImageViewer */,
 				9C04D5B5259167880021BB2C /* Alamofire */,
+				9CA6513825B26525004F45D1 /* Toast */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -258,6 +264,22 @@
 				9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9CA6513725B26506004F45D1 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9CA6513925B26546004F45D1 /* ToastViewController.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		9CA6513825B26525004F45D1 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				9CA6513D25B2655D004F45D1 /* ToastViewController.storyboard */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		9CAD64AB251A33DC000B0A33 /* View */ = {
@@ -485,6 +507,7 @@
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
+				9CA6513E25B2655D004F45D1 /* ToastViewController.storyboard in Resources */,
 				9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */,
 				9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */,
 				9C21B83324A879FA00658EA3 /* Main.storyboard in Resources */,
@@ -559,6 +582,7 @@
 				9CC5303524D487DF00B5453C /* TextViewController.swift in Sources */,
 				9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */,
 				9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */,
+				9CA6513A25B26546004F45D1 /* ToastViewController.swift in Sources */,
 				9C8A1A9E2553D12B005A1814 /* ImageViewerCollectionViewCell.swift in Sources */,
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,
 				9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */,
