@@ -19,6 +19,5 @@ class GoogleSpreadSheetRepository: GoogleSpreadSheetRepositoryProtocol {
 extension GoogleSpreadSheetRepository {
     func getGoogleSpreadSheet(uid: String,
                               completion: @escaping (Result<GoogleSpreadSheet, Error>) -> Void) {
-        <#code#>
     }
 }

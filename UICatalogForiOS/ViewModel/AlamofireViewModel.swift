@@ -33,6 +33,7 @@ extension AlamofireViewModel: UITableViewDataSource {
         return self.spreadSheets.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
+        return cell
     }
 }

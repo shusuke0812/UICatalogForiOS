@@ -39,6 +39,8 @@
 		9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */; };
 		9C8E9FC124AF79A500593CB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC024AF79A500593CB0 /* TableViewController.swift */; };
 		9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */; };
+		9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */; };
+		9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */; };
 		9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64A5251A3389000B0A33 /* ListViewController.swift */; };
 		9CAD64A9251A339C000B0A33 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */; };
 		9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64AF251A3417000B0A33 /* ListBaseView.swift */; };
@@ -93,6 +95,8 @@
 		9C8E9FBC24AF701D00593CB0 /* PagingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingMenuViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC024AF79A500593CB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9C8E9FC424AF8BBF00593CB0 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
+		9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireTableViewCell.xib; sourceTree = "<group>"; };
 		9CAD64A5251A3389000B0A33 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9CAD64A8251A339C000B0A33 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		9CAD64AF251A3417000B0A33 /* ListBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBaseView.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 			path = Static;
 			sourceTree = "<group>";
 		};
+		9CA6513025B26349004F45D1 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */,
+				9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
 		9CAD64AB251A33DC000B0A33 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		9CAD64AE251A33FE000B0A33 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				9CA6513025B26349004F45D1 /* Alamofire */,
 				9C8A1AA12553D135005A1814 /* ImageViewer */,
 				9CAD64B2251A343F000B0A33 /* ListViewCell.swift */,
 				9CAD64B3251A343F000B0A33 /* ListViewCell.xib */,
@@ -463,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */,
 				9CC17B9C250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard in Resources */,
 				9C21B83824A879FE00658EA3 /* LaunchScreen.storyboard in Resources */,
 				9C21B83524A879FE00658EA3 /* Assets.xcassets in Resources */,
@@ -552,6 +567,7 @@
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
+				9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */,
 				9C04D5BF259169300021BB2C /* GoogleSpreadSheet.swift in Sources */,
 				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
