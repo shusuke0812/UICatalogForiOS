@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastView" customModule="UICatalogForiOS" customModuleProvider="target">
             <connections>
-                <outlet property="imageView" destination="kgh-F4-J0V" id="l3c-Iy-ymn"/>
-                <outlet property="label" destination="0pO-sI-syI" id="lXy-ZQ-xHY"/>
+                <outlet property="imageView" destination="kgh-F4-J0V" id="gyq-Vw-VhK"/>
+                <outlet property="label" destination="0pO-sI-syI" id="FH5-n8-C9T"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

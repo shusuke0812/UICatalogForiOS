@@ -11,7 +11,11 @@ import UIKit
 class ToastView: XibView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
-    
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initUI()
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initUI()
@@ -24,6 +28,6 @@ extension ToastView {
         self.label.text = "toast image"
         self.label.tintColor = .white
         // 画像の設定
-        self.imageView.image = UIImage(named: "image_sample")
+        self.imageView.image = UIImage(named: "sample_image")
     }
 }
