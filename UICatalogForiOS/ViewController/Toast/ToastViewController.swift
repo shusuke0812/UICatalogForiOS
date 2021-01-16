@@ -24,6 +24,9 @@ class ToastViewController: UIViewController {
     @IBAction func didTapActivityButton(_ sender: Any) {
         self.showActivityToast()
     }
+    @IBAction func didTapCustomViewButton(_ sender: Any) {
+        self.showCustomViewToast()
+    }
 }
 // MARK: - Private Method
 extension ToastViewController {
@@ -44,5 +47,10 @@ extension ToastViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.view.hideToastActivity()
         }
+    }
+    // TODO: カスタムビューをトースト表示できない
+    private func showCustomViewToast() {
+        let cutomView = ToastView()
+        self.view.showToast(cutomView, duration: 2.0)
     }
 }

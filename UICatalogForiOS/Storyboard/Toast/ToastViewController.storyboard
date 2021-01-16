@@ -62,6 +62,19 @@
                                     <action selector="didTapActivityButton:" destination="pHI-sa-bFf" eventType="touchUpInside" id="6aC-ux-Uyn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WON-TS-ufB">
+                                <rect key="frame" x="16" y="488" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cUp-At-I9Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CutomView"/>
+                                <connections>
+                                    <action selector="didTapCustomViewButton:" destination="pHI-sa-bFf" eventType="touchUpInside" id="YyB-8D-XLG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNZ-fo-bFL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,13 +84,16 @@
                             <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="Ele-G9-y0c" secondAttribute="trailing" constant="16" id="7wV-Cx-Re4"/>
                             <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="kKR-kO-p66" secondAttribute="trailing" constant="16" id="9eT-xL-cGX"/>
                             <constraint firstItem="kKR-kO-p66" firstAttribute="top" secondItem="CgN-G3-PzH" secondAttribute="bottom" constant="60" id="G0l-Ms-R8U"/>
+                            <constraint firstItem="WON-TS-ufB" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="Hm1-eH-4iN"/>
                             <constraint firstItem="Ele-G9-y0c" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="Mlh-wL-jgs"/>
+                            <constraint firstItem="WON-TS-ufB" firstAttribute="top" secondItem="kKR-kO-p66" secondAttribute="bottom" constant="60" id="OIQ-DA-YBi"/>
                             <constraint firstItem="doV-wc-3gU" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" id="QSj-da-bln"/>
                             <constraint firstItem="kKR-kO-p66" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="bjE-8U-nAh"/>
                             <constraint firstItem="CgN-G3-PzH" firstAttribute="leading" secondItem="lNZ-fo-bFL" secondAttribute="leading" constant="16" id="dAA-kV-azM"/>
                             <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="CgN-G3-PzH" secondAttribute="trailing" constant="16" id="qEn-qu-o3Q"/>
                             <constraint firstItem="doV-wc-3gU" firstAttribute="top" secondItem="lNZ-fo-bFL" secondAttribute="top" id="qbE-AJ-uFp"/>
                             <constraint firstItem="doV-wc-3gU" firstAttribute="trailing" secondItem="lNZ-fo-bFL" secondAttribute="trailing" id="xZX-Ea-uuH"/>
+                            <constraint firstItem="lNZ-fo-bFL" firstAttribute="trailing" secondItem="WON-TS-ufB" secondAttribute="trailing" constant="16" id="yB6-62-pqg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -95,6 +111,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
