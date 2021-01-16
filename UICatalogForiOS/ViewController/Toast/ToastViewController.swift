@@ -50,7 +50,11 @@ extension ToastViewController {
     }
     // TODO: カスタムビューをトースト表示できない
     private func showCustomViewToast() {
-        let cutomView = ToastView()
-        self.view.showToast(cutomView, duration: 2.0)
+        //let customView = ToastView()
+        let customView = UIView()
+        customView.backgroundColor = .red
+        customView.frame.size.width = 100
+        customView.frame.size.height = 100
+        self.view.showToast(customView, duration: 2.0, position: .center)
     }
 }
