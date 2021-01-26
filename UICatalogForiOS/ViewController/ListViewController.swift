@@ -73,6 +73,7 @@ extension ListViewController: UITableViewDelegate {
             self.transitionToast()
         case .alamofire:
             print("DEBUG： alamofireがタップされました")
+            self.transitionAlamofire()
         }
     }
 }
@@ -102,6 +103,11 @@ extension ListViewController {
     private func transitionToast() {
         let s: UIStoryboard = UIStoryboard(name: "ToastViewController", bundle: nil)
         let vc: ToastViewController = s.instantiateInitialViewController() as! ToastViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionAlamofire() {
+        let s = UIStoryboard(name: "AlamofireViewController", bundle: nil)
+        let vc = s.instantiateInitialViewController() as! AlamofireViewController
         self.present(vc, animated: true, completion: nil)
     }
 }
