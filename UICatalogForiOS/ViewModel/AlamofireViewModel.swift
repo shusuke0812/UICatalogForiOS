@@ -9,15 +9,15 @@
 import UIKit
 
 class AlamofireViewModel: NSObject {
-    /// Googleスプレッドシートリポジトリ
-    private var googleSpreadSheetRepository: GoogleSpreadSheetRepositoryProtocol
-    /// Googleスプレッドシートのデータ
-    var spreadSheets: [GoogleSpreadSheet] = []
+    /// GitHubリポジトリのリポジトリクラス
+    private var gitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol
+    /// GitHubリポジトリー
+    var gitHubRepositories: [GitHubRepositoryItem] = []
     /// TableViewのセクション
     var sections: Int = 0
     
-    init(googleSpreadSheetRepository: GoogleSpreadSheetRepositoryProtocol) {
-        self.googleSpreadSheetRepository = googleSpreadSheetRepository
+    init(gitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol) {
+        self.gitHubRepositorySearchRepository = gitHubRepositorySearchRepository
     }
 }
 // MARK: - API Method
@@ -30,7 +30,7 @@ extension AlamofireViewModel: UITableViewDataSource {
         return self.sections
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.spreadSheets.count
+        return self.gitHubRepositories.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell

@@ -11,8 +11,8 @@
 		9C04D5B32591676E0021BB2C /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */; };
 		9C04D5B72591679C0021BB2C /* AlamofireViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04D5B62591679C0021BB2C /* AlamofireViewController.storyboard */; };
 		9C04D5BB259168580021BB2C /* AlamofireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5BA259168580021BB2C /* AlamofireViewModel.swift */; };
-		9C04D5BF259169300021BB2C /* GoogleSpreadSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */; };
-		9C04D5C425916AF10021BB2C /* GoogleSpreadSheetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */; };
+		9C04D5BF259169300021BB2C /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5BE259169300021BB2C /* GitHubRepository.swift */; };
+		9C04D5C425916AF10021BB2C /* GitHubRepositorySearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04D5C325916AF10021BB2C /* GitHubRepositorySearchRepository.swift */; };
 		9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C154BB924D3FD2900507DF6 /* CommonTableViewController.storyboard */; };
 		9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C154BBB24D3FFFF00507DF6 /* CommonTableViewController.swift */; };
 		9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B82B24A879FA00658EA3 /* AppDelegate.swift */; };
@@ -42,6 +42,8 @@
 		9C91779825B2A5F300B1B52E /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91779725B2A5F300B1B52E /* XibView.swift */; };
 		9C91779C25B2B01B00B1B52E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91779B25B2B01B00B1B52E /* ToastView.swift */; };
 		9C9177A025B2B02B00B1B52E /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C91779F25B2B02B00B1B52E /* ToastView.xib */; };
+		9C95F30425D0238F0057592F /* GitHubAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */; };
+		9C95F30825D028D90057592F /* SearchRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */; };
 		9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */; };
 		9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */; };
 		9CA6513A25B26546004F45D1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513925B26546004F45D1 /* ToastViewController.swift */; };
@@ -70,8 +72,8 @@
 		9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		9C04D5B62591679C0021BB2C /* AlamofireViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlamofireViewController.storyboard; sourceTree = "<group>"; };
 		9C04D5BA259168580021BB2C /* AlamofireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewModel.swift; sourceTree = "<group>"; };
-		9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSpreadSheet.swift; sourceTree = "<group>"; };
-		9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSpreadSheetRepository.swift; sourceTree = "<group>"; };
+		9C04D5BE259169300021BB2C /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		9C04D5C325916AF10021BB2C /* GitHubRepositorySearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositorySearchRepository.swift; sourceTree = "<group>"; };
 		9C154BB924D3FD2900507DF6 /* CommonTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonTableViewController.storyboard; sourceTree = "<group>"; };
 		9C154BBB24D3FFFF00507DF6 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		9C21B82824A879FA00658EA3 /* UICatalogForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalogForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,8 @@
 		9C91779725B2A5F300B1B52E /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		9C91779B25B2B01B00B1B52E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		9C91779F25B2B02B00B1B52E /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
+		9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIRequest.swift; sourceTree = "<group>"; };
+		9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesRequest.swift; sourceTree = "<group>"; };
 		9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireTableViewCell.xib; sourceTree = "<group>"; };
 		9CA6513925B26546004F45D1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +159,8 @@
 		9C04D5BD2591691D0021BB2C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				9C04D5BE259169300021BB2C /* GoogleSpreadSheet.swift */,
+				9C95F30225D0233C0057592F /* Request */,
+				9C95F30125D023320057592F /* Response */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -163,7 +168,7 @@
 		9C04D5C225916ADC0021BB2C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				9C04D5C325916AF10021BB2C /* GoogleSpreadSheetRepository.swift */,
+				9C04D5C325916AF10021BB2C /* GitHubRepositorySearchRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -270,6 +275,23 @@
 				9C91779F25B2B02B00B1B52E /* ToastView.xib */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		9C95F30125D023320057592F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9C04D5BE259169300021BB2C /* GitHubRepository.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9C95F30225D0233C0057592F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */,
+				9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		9CA6513025B26349004F45D1 /* Alamofire */ = {
@@ -591,7 +613,7 @@
 				9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */,
 				9C8A1A852553B088005A1814 /* ImageViewerOnTableViewBaseView.swift in Sources */,
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
-				9C04D5C425916AF10021BB2C /* GoogleSpreadSheetRepository.swift in Sources */,
+				9C04D5C425916AF10021BB2C /* GitHubRepositorySearchRepository.swift in Sources */,
 				9C04D5B32591676E0021BB2C /* AlamofireViewController.swift in Sources */,
 				9C21B83024A879FA00658EA3 /* BaseViewController.swift in Sources */,
 				9C91779825B2A5F300B1B52E /* XibView.swift in Sources */,
@@ -611,7 +633,7 @@
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
 				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
 				9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */,
-				9C04D5BF259169300021BB2C /* GoogleSpreadSheet.swift in Sources */,
+				9C04D5BF259169300021BB2C /* GitHubRepository.swift in Sources */,
 				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
@@ -619,8 +641,10 @@
 				9C91779C25B2B01B00B1B52E /* ToastView.swift in Sources */,
 				9C04D5BB259168580021BB2C /* AlamofireViewModel.swift in Sources */,
 				9CAD64B0251A3417000B0A33 /* ListBaseView.swift in Sources */,
+				9C95F30425D0238F0057592F /* GitHubAPIRequest.swift in Sources */,
 				9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */,
 				9C8A1AA52553D49F005A1814 /* Static.swift in Sources */,
+				9C95F30825D028D90057592F /* SearchRepositoriesRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
