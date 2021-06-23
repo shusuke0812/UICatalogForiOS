@@ -10,14 +10,29 @@ import Foundation
 
 protocol GitHubRepositorySearchRepositoryProtocol {
     /// Googleスプレッドシートのデータを取得する
-    func getGitHubRepositories(request: URLRequest, completion: @escaping (Result<GitHubRepositoryItem, Error>) -> Void)
+    /// - Parameters:
+    ///   - searchWord: 検索ワード
+    func getGitHubRepositories(searchWord: String, completion: @escaping (Result<GitHubRepository, Error>) -> Void)
 }
 
 class GitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol {
+    private let apiClient: APIClient
+    
+    init(apiClient: APIClient = APIClient.shared) {
+        self.apiClient = apiClient
+    }
 }
 // MARK: - API Method
 extension GitHubRepositorySearchRepository {
-    func getGitHubRepositories(request: URLRequest, completion: @escaping (Result<GitHubRepositoryItem, Error>) -> Void) {
-        
+    func getGitHubRepositories(searchWord: String, completion: @escaping (Result<GitHubRepository, Error>) -> Void) {
+        let request = SearchRepositoriesRequest(searchWord: searchWord)
+        apiClient.sendRequest(request) { result in
+            switch result {
+            case . success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }
