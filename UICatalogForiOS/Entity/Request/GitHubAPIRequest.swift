@@ -17,7 +17,7 @@ protocol GitHubAPIRequest {
     var method: Alamofire.HTTPMethod { get }
     var parameters:  Alamofire.Parameters? { get }
     var headers: Alamofire.HTTPHeaders? { get }
-    var body: Response? { get }
+    var body: Data? { get }
 }
 // MARK: - Custom Setting
 extension GitHubAPIRequest {

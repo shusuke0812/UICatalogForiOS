@@ -11,6 +11,8 @@ import Alamofire
 struct SearchRepositoriesRequest: GitHubAPIRequest {
     /// 検索ワード
     let searchWord: String
+    /// ページ番号
+    let page = 20
     
     // GitHubAPIRequestが要求する連想型
     typealias Response = GitHubRepository
@@ -24,13 +26,13 @@ struct SearchRepositoriesRequest: GitHubAPIRequest {
     var parameters: Parameters? {
         [
             "q": self.searchWord,
-            "page": 20
+            "page": self.page
         ]
     }
     var headers: HTTPHeaders? {
         nil
     }
-    var body: GitHubRepository? {
+    var body: Data? {
         nil
     }
 }
