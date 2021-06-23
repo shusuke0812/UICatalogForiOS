@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol AlamofireViewModeDelegate: AnyObject {
+    func didSuccessGetGitHubRepositorys()
+    func didFailedGetGitHubRepositorys(errorMessaage: String)
+}
+
 class AlamofireViewModel: NSObject {
     /// GitHubリポジトリのリポジトリクラス
-    private var gitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol
+    private let gitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol
     /// GitHubリポジトリー
-    var gitHubRepositories: [GitHubRepositoryItem] = []
+    var gitHubRepositorys: [GitHubRepositoryItem] = []
+    /// デリゲート
+    weak var delegate: AlamofireViewModeDelegate?
     /// TableViewのセクション
     var sections: Int = 0
     
@@ -22,7 +29,17 @@ class AlamofireViewModel: NSObject {
 }
 // MARK: - API Method
 extension AlamofireViewModel {
-    
+    func getGitHubRepositorys(searchWord: String) {
+        self.gitHubRepositorySearchRepository.getGitHubRepositories(searchWord: searchWord) { response in
+            switch response {
+            case .success(let response):
+                self.gitHubRepositorys = response.items
+                self.delegate?.didSuccessGetGitHubRepositorys()
+            case .failure(let error):
+                self.delegate?.didFailedGetGitHubRepositorys(errorMessaage: error.localizedDescription)
+            }
+        }
+    }
 }
 // MARK: - TableView DataSource Method
 extension AlamofireViewModel: UITableViewDataSource {
@@ -30,7 +47,7 @@ extension AlamofireViewModel: UITableViewDataSource {
         return self.sections
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.gitHubRepositories.count
+        return self.gitHubRepositorys.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
