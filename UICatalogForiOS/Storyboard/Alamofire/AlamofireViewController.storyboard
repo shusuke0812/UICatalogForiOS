@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sF4-VO-IfO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sF4-VO-IfO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,23 +23,34 @@
                                     <navigationItem title="Alamofire" id="1fp-7T-ihn"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CUE-ux-drP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="40t-BN-zUK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NHB-jY-jnq">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Zd-h1-bBL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CUE-ux-drP" firstAttribute="leading" secondItem="7Zd-h1-bBL" secondAttribute="leading" id="0le-tQ-RNC"/>
-                            <constraint firstItem="7Zd-h1-bBL" firstAttribute="trailing" secondItem="CUE-ux-drP" secondAttribute="trailing" id="7Wx-DU-uQu"/>
-                            <constraint firstItem="CUE-ux-drP" firstAttribute="top" secondItem="1gA-f0-U4v" secondAttribute="bottom" id="NwV-El-578"/>
-                            <constraint firstItem="7Zd-h1-bBL" firstAttribute="bottom" secondItem="CUE-ux-drP" secondAttribute="bottom" id="TA7-0p-u6V"/>
+                            <constraint firstItem="40t-BN-zUK" firstAttribute="trailing" secondItem="7Zd-h1-bBL" secondAttribute="trailing" id="1vU-Rx-4fq"/>
+                            <constraint firstItem="7Zd-h1-bBL" firstAttribute="trailing" secondItem="NHB-jY-jnq" secondAttribute="trailing" id="4Sm-mg-jf9"/>
+                            <constraint firstItem="7Zd-h1-bBL" firstAttribute="bottom" secondItem="NHB-jY-jnq" secondAttribute="bottom" id="6fj-g0-SSq"/>
+                            <constraint firstItem="NHB-jY-jnq" firstAttribute="leading" secondItem="7Zd-h1-bBL" secondAttribute="leading" id="cVx-Ba-bbJ"/>
+                            <constraint firstItem="NHB-jY-jnq" firstAttribute="top" secondItem="40t-BN-zUK" secondAttribute="bottom" id="fEC-s5-mH3"/>
                             <constraint firstItem="1gA-f0-U4v" firstAttribute="leading" secondItem="7Zd-h1-bBL" secondAttribute="leading" id="h80-4H-hzk"/>
                             <constraint firstItem="1gA-f0-U4v" firstAttribute="top" secondItem="7Zd-h1-bBL" secondAttribute="top" id="iIj-SW-WVW"/>
+                            <constraint firstItem="40t-BN-zUK" firstAttribute="top" secondItem="1gA-f0-U4v" secondAttribute="bottom" id="mrS-WJ-EAy"/>
                             <constraint firstItem="1gA-f0-U4v" firstAttribute="trailing" secondItem="7Zd-h1-bBL" secondAttribute="trailing" id="pDV-Od-1hh"/>
+                            <constraint firstItem="40t-BN-zUK" firstAttribute="leading" secondItem="7Zd-h1-bBL" secondAttribute="leading" id="t3A-yr-Bsk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="40t-BN-zUK" id="yiz-IR-YPn"/>
+                        <outlet property="tableView" destination="NHB-jY-jnq" id="hDt-GM-NRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlE-bX-HdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
