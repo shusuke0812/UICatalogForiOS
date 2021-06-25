@@ -12,13 +12,13 @@ struct SearchRepositoriesRequest: GitHubAPIRequest {
     /// 検索ワード
     let searchWord: String
     /// ページ番号
-    let page = 20
+    let page = 1
     
     // GitHubAPIRequestが要求する連想型
     typealias Response = GitHubRepository
     
     var path: String {
-        "/seach/repositories"
+        "/search/repositories"
     }
     var method: HTTPMethod {
         .get
