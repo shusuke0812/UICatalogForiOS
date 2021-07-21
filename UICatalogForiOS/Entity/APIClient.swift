@@ -9,7 +9,7 @@
 import Alamofire
 
 protocol APIClientProtocol {
-    func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void)
+    func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, APIClientError>) -> Void)
 }
 class APIClient: APIClientProtocol {
     /// シングルトン
@@ -18,19 +18,27 @@ class APIClient: APIClientProtocol {
     private init() {}
 }
 extension APIClient {
-    func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void) {
+    func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, APIClientError>) -> Void) {
         let url = request.baseURL + request.path
         AF.request(url, method: request.method, parameters: request.parameters, encoding: URLEncoding(destination: .queryString), headers: request.headers).responseJSON { response in
-            // MEMO: response.resultの結果によって処理を分けたほうが良いかも
             guard let data = response.data else {
                 return
             }
             let decoder = JSONDecoder()
-            do {
-                let apiResponse = try decoder.decode(T.Response.self, from: data)
-                completion(.success(apiResponse))
-            } catch {
-                completion(.failure(error))
+            if (200..<300).contains(response.response!.statusCode) {
+                do {
+                    let apiResponse = try decoder.decode(T.Response.self, from: data)
+                    completion(.success(apiResponse))
+                } catch {
+                    completion(.failure(.responseParseError(error)))
+                }
+            } else {
+                do {
+                    let apiError = try decoder.decode(GitHubAPIError.self, from: data)
+                    completion(.failure(.apiError(apiError)))
+                } catch {
+                    completion(.failure(.responseParseError(error)))
+                }
             }
         }
     }
