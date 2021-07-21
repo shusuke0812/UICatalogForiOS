@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GitHubAPIError: Error {
+struct GitHubAPIError: Codable, Error {
     var message: String
     var errors: [FieldError]
     
@@ -17,7 +17,7 @@ struct GitHubAPIError: Error {
         case errors
     }
 }
-struct FieldError: Error {
+struct FieldError: Codable {
     var resorce: String
     var field: String
     var missingField: String
