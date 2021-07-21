@@ -55,6 +55,8 @@
 		9CAD64B4251A343F000B0A33 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64B2251A343F000B0A33 /* ListViewCell.swift */; };
 		9CAD64B5251A343F000B0A33 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAD64B3251A343F000B0A33 /* ListViewCell.xib */; };
 		9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAD64C2251A36FD000B0A33 /* ListViewModel.swift */; };
+		9CB988C326A79C8100176A5F /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB988C226A79C8100176A5F /* APIClientError.swift */; };
+		9CB988C526A79CC800176A5F /* GitHubAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB988C426A79CC800176A5F /* GitHubAPIError.swift */; };
 		9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */; };
 		9CBAAA01251ADDDD007CED92 /* ImageViewerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */; };
 		9CC0055024BB4C35007AECEC /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */; };
@@ -119,6 +121,8 @@
 		9CAD64B2251A343F000B0A33 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		9CAD64B3251A343F000B0A33 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
 		9CAD64C2251A36FD000B0A33 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		9CB988C226A79C8100176A5F /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
+		9CB988C426A79CC800176A5F /* GitHubAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIError.swift; sourceTree = "<group>"; };
 		9CBAA9FC251ADDCF007CED92 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		9CBAAA00251ADDDD007CED92 /* ImageViewerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerViewController.storyboard; sourceTree = "<group>"; };
 		9CC0054F24BB4C34007AECEC /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		9C04D5BD2591691D0021BB2C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				9CB988C126A79C6500176A5F /* Error */,
 				9C95F30225D0233C0057592F /* Request */,
 				9C95F30125D023320057592F /* Response */,
 				9C9AC90B268382BD00BD013C /* APIClient.swift */,
@@ -369,6 +374,15 @@
 				9CC17B9B250CE5FA00B924D0 /* TOCropViewControllerSample.storyboard */,
 			);
 			path = TOCropViewController;
+			sourceTree = "<group>";
+		};
+		9CB988C126A79C6500176A5F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				9CB988C226A79C8100176A5F /* APIClientError.swift */,
+				9CB988C426A79CC800176A5F /* GitHubAPIError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		9CBAA9FA251ADD8B007CED92 /* ImageViewer */ = {
@@ -613,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB988C326A79C8100176A5F /* APIClientError.swift in Sources */,
 				9CBAA9FD251ADDCF007CED92 /* ImageViewerViewController.swift in Sources */,
 				9C8A1A852553B088005A1814 /* ImageViewerOnTableViewBaseView.swift in Sources */,
 				9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */,
@@ -638,6 +653,7 @@
 				9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */,
 				9C04D5BF259169300021BB2C /* GitHubRepository.swift in Sources */,
 				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
+				9CB988C526A79CC800176A5F /* GitHubAPIError.swift in Sources */,
 				9CAD64C3251A36FD000B0A33 /* ListViewModel.swift in Sources */,
 				9C154BBC24D3FFFF00507DF6 /* CommonTableViewController.swift in Sources */,
 				9C8E9FC524AF8BBF00593CB0 /* HeaderViewController.swift in Sources */,
