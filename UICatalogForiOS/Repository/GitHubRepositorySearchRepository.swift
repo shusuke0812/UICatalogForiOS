@@ -16,17 +16,12 @@ protocol GitHubRepositorySearchRepositoryProtocol {
 }
 
 class GitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol {
-    private let apiClient: AlamofireAPIClient
-    
-    init(apiClient: AlamofireAPIClient = AlamofireAPIClient.shared) {
-        self.apiClient = apiClient
-    }
 }
 // MARK: - API Method
 extension GitHubRepositorySearchRepository {
     func getGitHubRepositories(searchWord: String, completion: @escaping (Result<GitHubRepository, Error>) -> Void) {
         let request = SearchRepositoriesRequest(searchWord: searchWord)
-        apiClient.sendRequest(request) { result in
+        AlamofireAPIClient.shared.sendRequest(request) { result in
             switch result {
             case . success(let response):
                 completion(.success(response))
