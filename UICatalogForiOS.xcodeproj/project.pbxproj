@@ -44,7 +44,7 @@
 		9C9177A025B2B02B00B1B52E /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C91779F25B2B02B00B1B52E /* ToastView.xib */; };
 		9C95F30425D0238F0057592F /* GitHubAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */; };
 		9C95F30825D028D90057592F /* SearchRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */; };
-		9C9AC90C268382BD00BD013C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC90B268382BD00BD013C /* APIClient.swift */; };
+		9C9AC90C268382BD00BD013C /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC90B268382BD00BD013C /* AlamofireAPIClient.swift */; };
 		9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */; };
 		9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */; };
 		9CA6513A25B26546004F45D1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513925B26546004F45D1 /* ToastViewController.swift */; };
@@ -110,7 +110,7 @@
 		9C91779F25B2B02B00B1B52E /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
 		9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIRequest.swift; sourceTree = "<group>"; };
 		9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesRequest.swift; sourceTree = "<group>"; };
-		9C9AC90B268382BD00BD013C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9C9AC90B268382BD00BD013C /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireTableViewCell.xib; sourceTree = "<group>"; };
 		9CA6513925B26546004F45D1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				9CB988C126A79C6500176A5F /* Error */,
 				9C95F30225D0233C0057592F /* Request */,
 				9C95F30125D023320057592F /* Response */,
-				9C9AC90B268382BD00BD013C /* APIClient.swift */,
+				9C9AC90B268382BD00BD013C /* AlamofireAPIClient.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -664,7 +664,7 @@
 				9CC0925B251CFF6B001CA9C4 /* PkhudViewController.swift in Sources */,
 				9C8A1AA52553D49F005A1814 /* Static.swift in Sources */,
 				9C95F30825D028D90057592F /* SearchRepositoriesRequest.swift in Sources */,
-				9C9AC90C268382BD00BD013C /* APIClient.swift in Sources */,
+				9C9AC90C268382BD00BD013C /* AlamofireAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,16 +8,16 @@
 
 import Alamofire
 
-protocol APIClientProtocol {
+protocol AlamofireAPIClientProtocol {
     func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, APIClientError>) -> Void)
 }
-class APIClient: APIClientProtocol {
+class AlamofireAPIClient: AlamofireAPIClientProtocol {
     /// シングルトン
-    static let shared = APIClient()
+    static let shared = AlamofireAPIClient()
     
     private init() {}
 }
-extension APIClient {
+extension AlamofireAPIClient {
     func sendRequest<T: GitHubAPIRequest>(_ request: T, completion: @escaping (Result<T.Response, APIClientError>) -> Void) {
         let url = request.baseURL + request.path
         AF.request(url, method: request.method, parameters: request.parameters, encoding: URLEncoding(destination: .queryString), headers: request.headers).responseJSON { response in

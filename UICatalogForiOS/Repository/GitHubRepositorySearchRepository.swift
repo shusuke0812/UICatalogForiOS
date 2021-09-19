@@ -16,9 +16,9 @@ protocol GitHubRepositorySearchRepositoryProtocol {
 }
 
 class GitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol {
-    private let apiClient: APIClient
+    private let apiClient: AlamofireAPIClient
     
-    init(apiClient: APIClient = APIClient.shared) {
+    init(apiClient: AlamofireAPIClient = AlamofireAPIClient.shared) {
         self.apiClient = apiClient
     }
 }
