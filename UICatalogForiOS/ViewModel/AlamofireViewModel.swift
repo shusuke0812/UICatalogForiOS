@@ -21,7 +21,7 @@ class AlamofireViewModel: NSObject {
     /// デリゲート
     weak var delegate: AlamofireViewModeDelegate?
     /// TableViewのセクション
-    var sections: Int = 0
+    var sections: Int = 1
     
     init(gitHubRepositorySearchRepository: GitHubRepositorySearchRepositoryProtocol) {
         self.gitHubRepositorySearchRepository = gitHubRepositorySearchRepository
@@ -50,7 +50,9 @@ extension AlamofireViewModel: UITableViewDataSource {
         return self.gitHubRepositorys.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlamofireTableViewCell", for: indexPath) as! AlamofireTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AlamofireTableViewCell.reuseIdentifier, for: indexPath) as! AlamofireTableViewCell
+        let gitHubRepository = self.gitHubRepositorys[indexPath.row]
+        cell.configLabel(title: gitHubRepository.fullName, star: gitHubRepository.starCount)
         return cell
     }
 }

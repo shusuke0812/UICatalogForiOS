@@ -9,16 +9,23 @@
 import UIKit
 
 class AlamofireTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var starLabel: UILabel!
+    
+    static func initiate() -> UINib {
+        UINib(nibName: AlamofireTableViewCell.reuseIdentifier, bundle: nil)
+    }
+    static let reuseIdentifier = "AlamofireTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+// MARK: - Setting
+extension AlamofireTableViewCell {
+    func configLabel(title: String, star: Int) {
+        self.titleLabel.text = title
+        self.starLabel.text = "star: " + "\(star)"
     }
-    
 }

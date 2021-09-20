@@ -20,6 +20,8 @@ class AlamofireViewController: UIViewController {
         super.viewDidLoad()
         self.viewModel = AlamofireViewModel(gitHubRepositorySearchRepository: GitHubRepositorySearchRepository())
         self.setDelegate()
+        
+        self.tableView.register(AlamofireTableViewCell.initiate(), forCellReuseIdentifier: AlamofireTableViewCell.reuseIdentifier)
     }
 }
 // MARK: - Init
