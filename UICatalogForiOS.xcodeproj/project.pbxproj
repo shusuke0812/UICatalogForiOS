@@ -202,9 +202,9 @@
 		9C21B82A24A879FA00658EA3 /* UICatalogForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C9530A826F88CFB0005906E /* Utility */,
 				9C04D5C225916ADC0021BB2C /* Repository */,
 				9C04D5BD2591691D0021BB2C /* Entity */,
-				9C8A1AA32553D48D005A1814 /* Static */,
 				9CAD64AC251A33E2000B0A33 /* ViewModel */,
 				9CAD64AB251A33DC000B0A33 /* View */,
 				9C21B84224A883D100658EA3 /* Storyboard */,
@@ -283,6 +283,22 @@
 				9C91779F25B2B02B00B1B52E /* ToastView.xib */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		9C9530A826F88CFB0005906E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9C9530A926F88D070005906E /* Manager */,
+				9C8A1AA32553D48D005A1814 /* Static */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9C9530A926F88D070005906E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		9C95F30125D023320057592F /* Response */ = {
