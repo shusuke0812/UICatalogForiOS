@@ -22,6 +22,7 @@ class AlamofireViewController: UIViewController {
         self.setDelegate()
         
         self.tableView.register(AlamofireTableViewCell.initiate(), forCellReuseIdentifier: AlamofireTableViewCell.reuseIdentifier)
+        self.tableView.tableFooterView = UIView()
     }
 }
 // MARK: - Init
