@@ -38,6 +38,7 @@ extension AlamofireViewController {
 extension AlamofireViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchWord = searchBar.text else { return }
+        LoadIndicatorManager.shared.startAnimation(vc: self)
         self.viewModel.getGitHubRepositorys(searchWord: searchWord)
         self.searchBar.endEditing(true)
     }
@@ -51,10 +52,14 @@ extension AlamofireViewController: UITableViewDelegate {
 extension AlamofireViewController: AlamofireViewModeDelegate {
     func didSuccessGetGitHubRepositorys() {
         DispatchQueue.main.async {
+            LoadIndicatorManager.shared.stopAnimation(vc: self)
             self.tableView.reloadData()
         }
     }
     func didFailedGetGitHubRepositorys(errorMessaage: String) {
         print("DEBUG: ", errorMessaage)
+        DispatchQueue.main.async {
+            LoadIndicatorManager.shared.stopAnimation(vc: self)
+        }
     }
 }
