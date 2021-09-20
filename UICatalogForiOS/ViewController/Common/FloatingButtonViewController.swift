@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol FloatingButtonViewControllerDelegate: class {
+protocol FloatingButtonViewControllerDelegate: AnyObject {
     // タブを切り替える
     func didTapChangeEvent()
 }
