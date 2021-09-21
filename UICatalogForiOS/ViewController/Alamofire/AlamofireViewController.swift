@@ -38,13 +38,17 @@ extension AlamofireViewController {
 // MARK: - Setting
 extension AlamofireViewController {
     private func setBackgroundTableView() {
-        let searchNoResultLabel = UILabel(frame: .zero)
-        searchNoResultLabel.text = "検索結果がありません"
-        searchNoResultLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .heavy)
-        searchNoResultLabel.textColor = .lightGray
-        searchNoResultLabel.textAlignment = .center
-        
-        self.tableView.backgroundView = searchNoResultLabel
+        if self.viewModel.gitHubRepositorys.isEmpty {
+            let searchNoResultLabel = UILabel(frame: .zero)
+            searchNoResultLabel.text = "検索結果がありません"
+            searchNoResultLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .heavy)
+            searchNoResultLabel.textColor = .lightGray
+            searchNoResultLabel.textAlignment = .center
+            
+            self.tableView.backgroundView = searchNoResultLabel
+        } else {
+            self.tableView.backgroundView = nil
+        }
     }
 }
 
@@ -67,6 +71,7 @@ extension AlamofireViewController: AlamofireViewModeDelegate {
     func didSuccessGetGitHubRepositorys() {
         DispatchQueue.main.async {
             LoadIndicatorManager.shared.stopAnimation(vc: self)
+            self.setBackgroundTableView()
             self.tableView.reloadData()
         }
     }
