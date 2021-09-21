@@ -83,6 +83,7 @@ extension AlamofireViewController: AlamofireViewModeDelegate {
         print("DEBUG: ", errorMessaage)
         DispatchQueue.main.async {
             LoadIndicatorManager.shared.stopAnimation(vc: self)
+            UIAlertController.showAlert(style: .alert, vc: self, title: nil, message: errorMessaage, okBtnTitle: "OK", cancelBtnTitle: nil, completionOk: nil)
         }
     }
 }

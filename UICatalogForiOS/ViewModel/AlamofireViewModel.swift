@@ -36,7 +36,7 @@ extension AlamofireViewModel {
                 self.gitHubRepositorys = response.items
                 self.delegate?.didSuccessGetGitHubRepositorys()
             case .failure(let error):
-                self.delegate?.didFailedGetGitHubRepositorys(errorMessaage: error.localizedDescription)
+                self.delegate?.didFailedGetGitHubRepositorys(errorMessaage: "検索に失敗しました")
             }
         }
     }
