@@ -55,7 +55,10 @@ extension AlamofireViewController {
 // MARK: - UISearchBar Delegate
 extension AlamofireViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchWord = searchBar.text, !searchWord.isEmpty else { return }
+        guard let searchWord = searchBar.text, !searchWord.isEmpty else {
+            UIAlertController.showAlert(style: .alert, vc: self, title: nil, message: "空文字で検索はできません", okBtnTitle: "OK", cancelBtnTitle: nil, completionOk: nil)
+            return
+        }
         self.tableView.backgroundView = nil
         LoadIndicatorManager.shared.startAnimation(vc: self)
         self.viewModel.getGitHubRepositorys(searchWord: searchWord)
