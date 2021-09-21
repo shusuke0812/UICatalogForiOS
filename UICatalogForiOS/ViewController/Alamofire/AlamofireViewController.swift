@@ -23,6 +23,7 @@ class AlamofireViewController: UIViewController {
         
         self.tableView.register(AlamofireTableViewCell.initiate(), forCellReuseIdentifier: AlamofireTableViewCell.reuseIdentifier)
         self.tableView.tableFooterView = UIView()
+        self.setBackgroundTableView()
     }
 }
 // MARK: - Init
@@ -34,6 +35,19 @@ extension AlamofireViewController {
         self.viewModel.delegate = self
     }
 }
+// MARK: - Setting
+extension AlamofireViewController {
+    private func setBackgroundTableView() {
+        let searchNoResultLabel = UILabel(frame: .zero)
+        searchNoResultLabel.text = "検索結果がありません"
+        searchNoResultLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .heavy)
+        searchNoResultLabel.textColor = .lightGray
+        searchNoResultLabel.textAlignment = .center
+        
+        self.tableView.backgroundView = searchNoResultLabel
+    }
+}
+
 // MARK: - UISearchBar Delegate
 extension AlamofireViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
