@@ -56,6 +56,7 @@ extension AlamofireViewController {
 extension AlamofireViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchWord = searchBar.text, !searchWord.isEmpty else { return }
+        self.tableView.backgroundView = nil
         LoadIndicatorManager.shared.startAnimation(vc: self)
         self.viewModel.getGitHubRepositorys(searchWord: searchWord)
         self.searchBar.endEditing(true)
