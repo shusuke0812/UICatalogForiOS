@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GitHubRepositorySearchRepositoryProtocol {
-    /// Googleスプレッドシートのデータを取得する
+    /// GitHubのリポジトリを取得する
     /// - Parameters:
     ///   - searchWord: 検索ワード
     func getGitHubRepositories(searchWord: String, completion: @escaping (Result<GitHubRepository, Error>) -> Void)
