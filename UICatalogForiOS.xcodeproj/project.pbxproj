@@ -183,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				9C04D5C325916AF10021BB2C /* GitHubRepositorySearchRepository.swift */,
-				9CA0D12826FCC9CD00FB281C /* GitHubReadme.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -314,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				9C04D5BE259169300021BB2C /* GitHubRepository.swift */,
+				9CA0D12826FCC9CD00FB281C /* GitHubReadme.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
