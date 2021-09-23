@@ -48,6 +48,7 @@
 		9C9AC90C268382BD00BD013C /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC90B268382BD00BD013C /* AlamofireAPIClient.swift */; };
 		9CA0D12926FCC9CD00FB281C /* GitHubReadme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0D12826FCC9CD00FB281C /* GitHubReadme.swift */; };
 		9CA0D12B26FCCAD500FB281C /* GiitHubReadmeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0D12A26FCCAD500FB281C /* GiitHubReadmeRepository.swift */; };
+		9CA0D16926FCD26500FB281C /* GetReadmeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0D16826FCD26500FB281C /* GetReadmeRequest.swift */; };
 		9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */; };
 		9CA6513425B263A5004F45D1 /* AlamofireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */; };
 		9CA6513A25B26546004F45D1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6513925B26546004F45D1 /* ToastViewController.swift */; };
@@ -118,6 +119,7 @@
 		9C9AC90B268382BD00BD013C /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		9CA0D12826FCC9CD00FB281C /* GitHubReadme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReadme.swift; sourceTree = "<group>"; };
 		9CA0D12A26FCCAD500FB281C /* GiitHubReadmeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiitHubReadmeRepository.swift; sourceTree = "<group>"; };
+		9CA0D16826FCD26500FB281C /* GetReadmeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReadmeRequest.swift; sourceTree = "<group>"; };
 		9CA6513125B263A5004F45D1 /* AlamofireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTableViewCell.swift; sourceTree = "<group>"; };
 		9CA6513225B263A5004F45D1 /* AlamofireTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlamofireTableViewCell.xib; sourceTree = "<group>"; };
 		9CA6513925B26546004F45D1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				9C95F30325D0238F0057592F /* GitHubAPIRequest.swift */,
 				9C95F30725D028D90057592F /* SearchRepositoriesRequest.swift */,
+				9CA0D16826FCD26500FB281C /* GetReadmeRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				9CC5303324D47CE700B5453C /* MXParentScrollViewController.swift in Sources */,
 				9CAD64A6251A3389000B0A33 /* ListViewController.swift in Sources */,
 				9C8A1A952553BF7F005A1814 /* ImageViewerOnTableViewModel.swift in Sources */,
+				9CA0D16926FCD26500FB281C /* GetReadmeRequest.swift in Sources */,
 				9C8E9FBD24AF701D00593CB0 /* PagingMenuViewController.swift in Sources */,
 				9C21B84624A8898700658EA3 /* ChangedFavoriteTabChildViewController.swift in Sources */,
 				9C21B82C24A879FA00658EA3 /* AppDelegate.swift in Sources */,
