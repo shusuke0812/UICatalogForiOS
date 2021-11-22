@@ -19,3 +19,5 @@ iOSアプリ開発用のライブラリ集
   - API通信：[Alamofire](https://github.com/Alamofire/Alamofire)
 - 非同期処理
   - Promise: [Hydra](https://github.com/malcommac/Hydra)
+- その他
+  - DI：[Swinject](https://github.com/Swinject/Swinject)
