@@ -36,13 +36,7 @@ extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section: ListSection = self.viewModel.sections[indexPath.section]
         switch  section {
-        case .ui:
-            return 50
-        case .image:
-            return 50
-        case .interaction:
-            return 50
-        case .networking:
+        case .ui, .image, .interaction, .networking:
             return 50
         }
     }
