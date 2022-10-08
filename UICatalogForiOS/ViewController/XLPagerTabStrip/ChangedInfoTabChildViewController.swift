@@ -15,7 +15,6 @@ class ChangedInfoTabChildViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func didTapChangeTab(_ sender: Any) {
-        print("DEBUG: ボタンがタップされました")
         let parentVC = self.parent as! ChangedTabViewController
         parentVC.moveToViewController(at: 0)
     }

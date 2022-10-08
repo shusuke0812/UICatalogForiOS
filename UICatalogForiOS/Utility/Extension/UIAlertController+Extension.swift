@@ -13,12 +13,10 @@ extension UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         if let cancelBtnTitle = cancelBtnTitle {
             let cancelAction = UIAlertAction(title: cancelBtnTitle, style: .cancel) { _ -> Void in
-                print("DEBUG: アラートキャンセルボタンが押されました")
             }
             alert.addAction(cancelAction)
         }
         let okAction = UIAlertAction(title: okBtnTitle, style: .default) { _ -> Void in
-            print("DEBUG: アラートOKボタンが押されました")
             if let completionOk = completionOk {
                 completionOk()
             }

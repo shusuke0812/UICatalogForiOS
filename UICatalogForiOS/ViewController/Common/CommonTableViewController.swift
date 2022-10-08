@@ -56,7 +56,6 @@ class CommonTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @objc private func refresh(sender: UIRefreshControl) {
-        print("DEBUG： リフレッシュ機能が起動しました")
         self.tableView.reloadData()
         self.tableView.refreshControl?.endRefreshing()
     }

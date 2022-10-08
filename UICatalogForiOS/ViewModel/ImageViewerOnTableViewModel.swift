@@ -14,8 +14,7 @@ class ImageViewerOnTableViewModel: NSObject {
 // MARK: - TableView DataSource Method
 extension ImageViewerOnTableViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("")
-        return 3
+        3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = self.checkTableViewKind(tableView)

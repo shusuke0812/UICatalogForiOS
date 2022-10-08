@@ -47,26 +47,20 @@ extension ListViewController: UITableViewDelegate {
         let sectionRow: ListRow = self.viewModel.sections[indexPath.section].rows[indexPath.row]
         switch sectionRow {
         case .mxparallax:
-            print("DEBUG： mxparallaxがタップされました")
+            break
         case .xlpager:
-            print("DEBUG： xlpagerがタップされました")
+            break
         case .tocrop:
-            print("DEBUG： tocropがタップされました")
             self.transitionTOCropViewController()
         case .imageViewer:
-            print("DEBUG： imageViewerがタップされました")
             self.transitionImageViewer()
         case .imageViewerOnTableView:
-            print("DEBUG： imageViewerOnTableviewがタップされました")
             self.transitionImageViewerOnTableView()
         case .hud:
-            print("DEBUG： pkhudがタップされました")
             self.transitionPkHud()
         case .toast:
-            print("DEBUG: toastがタップされました")
             self.transitionToast()
         case .alamofire:
-            print("DEBUG： alamofireがタップされました")
             self.transitionAlamofire()
         case .hydra:
             transitionHydra()

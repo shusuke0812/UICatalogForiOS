@@ -26,7 +26,7 @@ class PkhudViewController: UIViewController {
         HUD.show(.progress)
         // 指定時間後にHUDを閉じる
         HUD.flash(.progress, delay: 5) { _ in
-            print("DEBUG： HUDが閉じられました")
+            // do nothing
         }
         #endif
         
@@ -37,7 +37,7 @@ class PkhudViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             // HUDを閉じる
             HUD.hide() { _ in
-                print("DEBUG： HUDが閉じられました")
+                // do nothing
             }
         }
         #endif

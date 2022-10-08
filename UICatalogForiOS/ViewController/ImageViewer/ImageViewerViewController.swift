@@ -44,7 +44,6 @@ extension ImageViewerViewController: UICollectionViewDataSource, UICollectionVie
     }
     // 写真が選択された時の処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("「\(images[indexPath.row])」が選択されました")
         // ImageViewerを起動
         self.openImageViewer(indexPath: indexPath)
     }
@@ -53,7 +52,6 @@ extension ImageViewerViewController: UICollectionViewDataSource, UICollectionVie
 extension ImageViewerViewController: GalleryItemsDataSource {
     /// imageをタップしたらImageViewerを立ち上げる処理
     @IBAction func didTapImage(_ sender: Any) {
-        print("DEBUG： 画像がタップされました")
         // 拡大表示する画像をセット
         guard let image = UIImage(named: images[0]) else { return }
         galleryItem = GalleryItem.image { $0(image) }

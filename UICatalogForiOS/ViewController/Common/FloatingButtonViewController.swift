@@ -22,7 +22,6 @@ class FloatingButtonViewController: UIViewController {
         // self.delegate?.didTapChangeTab()
     }
     @IBAction func buttonTap(_ sender: Any) {
-        print("DEBUG：　ボタンがタップされました")
         self.delegate?.didTapChangeEvent()
     }
 }

@@ -20,7 +20,6 @@ class MXParentScrollViewController: MXScrollViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("DEBUG: 拡張MXScrollVCのメソッドが呼ばれました")
         if (segue.identifier == "Header") {
             let vc1: HeaderViewController = (segue.destination as? HeaderViewController)!
             vc1.getPreviousPageValue = getValue

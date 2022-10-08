@@ -33,7 +33,6 @@ class TableViewController: UITableViewController {
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        print("DEBUG： リフレッシュ機能が起動しました")
         self.tableView.reloadData()
         self.tableView.refreshControl?.endRefreshing()
     }
