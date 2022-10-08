@@ -24,7 +24,7 @@ enum ListSection {
         case .interaction:
             return [.hud, .toast]
         case .networking:
-            return [.alamofire]
+            return [.alamofire, .hydra]
         }
     }
 }
@@ -38,6 +38,7 @@ enum ListRow: String {
     case imageViewerOnTableView = "ImageViewer(on TableView)"
     case hud                    = "PKHUD"
     case alamofire              = "Alamofire"
+    case hydra                  = "Hydra"
     case toast                  = "Toast"
 }
 

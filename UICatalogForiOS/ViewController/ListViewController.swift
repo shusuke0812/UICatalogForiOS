@@ -68,6 +68,8 @@ extension ListViewController: UITableViewDelegate {
         case .alamofire:
             print("DEBUG： alamofireがタップされました")
             self.transitionAlamofire()
+        case .hydra:
+            transitionHydra()
         }
     }
 }
@@ -103,5 +105,10 @@ extension ListViewController {
         let s = UIStoryboard(name: "AlamofireViewController", bundle: nil)
         let vc = s.instantiateInitialViewController() as! AlamofireViewController
         self.present(vc, animated: true, completion: nil)
+    }
+    private func transitionHydra() {
+        let s = UIStoryboard(name: "HydraViewController", bundle: nil)
+        let vc = s.instantiateInitialViewController() as! HydraViewController
+        present(vc, animated: true, completion: nil)
     }
 }

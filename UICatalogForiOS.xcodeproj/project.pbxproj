@@ -26,6 +26,8 @@
 		9C21B84824A889A200658EA3 /* ChangedInfoTabChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */; };
 		9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */; };
 		9C21B84C24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */; };
+		9C87614928F1D1D8002D7877 /* HydraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C87614828F1D1D8002D7877 /* HydraViewController.swift */; };
+		9C87614C28F1D205002D7877 /* HydraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C87614B28F1D205002D7877 /* HydraViewController.storyboard */; };
 		9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A7E2553AA98005A1814 /* ImageViewerOnTableViewController.swift */; };
 		9C8A1A822553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */; };
 		9C8A1A852553B088005A1814 /* ImageViewerOnTableViewBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A1A842553B088005A1814 /* ImageViewerOnTableViewBaseView.swift */; };
@@ -97,6 +99,8 @@
 		9C21B84724A889A200658EA3 /* ChangedInfoTabChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedInfoTabChildViewController.swift; sourceTree = "<group>"; };
 		9C21B84924A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedFavoriteTabChildViewController.storyboard; sourceTree = "<group>"; };
 		9C21B84B24A88A4A00658EA3 /* ChangedInfoTabChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangedInfoTabChildViewController.storyboard; sourceTree = "<group>"; };
+		9C87614828F1D1D8002D7877 /* HydraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraViewController.swift; sourceTree = "<group>"; };
+		9C87614B28F1D205002D7877 /* HydraViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HydraViewController.storyboard; sourceTree = "<group>"; };
 		9C8A1A7E2553AA98005A1814 /* ImageViewerOnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOnTableViewController.swift; sourceTree = "<group>"; };
 		9C8A1A812553ABA6005A1814 /* ImageViewerOnTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewerOnTableViewController.storyboard; sourceTree = "<group>"; };
 		9C8A1A842553B088005A1814 /* ImageViewerOnTableViewBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerOnTableViewBaseView.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				9CBAA9FA251ADD8B007CED92 /* ImageViewer */,
 				9C799E362590D98200FFD85E /* Alamofire */,
 				9CA6513725B26506004F45D1 /* Toast */,
+				9C87614728F1D1AF002D7877 /* Hydra */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				9CBAA9FB251ADD9B007CED92 /* ImageViewer */,
 				9C04D5B5259167880021BB2C /* Alamofire */,
 				9CA6513825B26525004F45D1 /* Toast */,
+				9C87614A28F1D1E7002D7877 /* Hydra */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -266,6 +272,22 @@
 				9C04D5B22591676E0021BB2C /* AlamofireViewController.swift */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9C87614728F1D1AF002D7877 /* Hydra */ = {
+			isa = PBXGroup;
+			children = (
+				9C87614828F1D1D8002D7877 /* HydraViewController.swift */,
+			);
+			path = Hydra;
+			sourceTree = "<group>";
+		};
+		9C87614A28F1D1E7002D7877 /* Hydra */ = {
+			isa = PBXGroup;
+			children = (
+				9C87614B28F1D205002D7877 /* HydraViewController.storyboard */,
+			);
+			path = Hydra;
 			sourceTree = "<group>";
 		};
 		9C8A1AA12553D135005A1814 /* ImageViewer */ = {
@@ -600,6 +622,7 @@
 				9C21B83524A879FE00658EA3 /* Assets.xcassets in Resources */,
 				9C9177A025B2B02B00B1B52E /* ToastView.xib in Resources */,
 				9CC09260251CFF94001CA9C4 /* PkhudViewController.storyboard in Resources */,
+				9C87614C28F1D205002D7877 /* HydraViewController.storyboard in Resources */,
 				9C21B84424A883E800658EA3 /* ChangedTabViewController.storyboard in Resources */,
 				9C21B84A24A88A1300658EA3 /* ChangedFavoriteTabChildViewController.storyboard in Resources */,
 				9C154BBA24D3FD2900507DF6 /* CommonTableViewController.storyboard in Resources */,
@@ -693,6 +716,7 @@
 				9C8A1A7F2553AA98005A1814 /* ImageViewerOnTableViewController.swift in Sources */,
 				9CA6513325B263A5004F45D1 /* AlamofireTableViewCell.swift in Sources */,
 				9C04D5BF259169300021BB2C /* GitHubRepository.swift in Sources */,
+				9C87614928F1D1D8002D7877 /* HydraViewController.swift in Sources */,
 				9C8A1A992553CFF0005A1814 /* ImageViewerCell.swift in Sources */,
 				9CAF933026FA323F00EA300B /* UIAlertController+Extension.swift in Sources */,
 				9CB988C526A79CC800176A5F /* GitHubAPIError.swift in Sources */,
