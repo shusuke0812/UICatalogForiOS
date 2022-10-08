@@ -2,9 +2,9 @@ iOSアプリ開発用のライブラリ集
 ====
 　
 ## 開発環境
-- Xcode version 11.3.1
-- pod version 1.9.1
-- MacOS Catalina version 10.15.4
+- Xcode version 13.3.1 (13E500a)
+- pod version 1.11.3
+- MacOS Monterey version 12.3.1
 
 ## ライブラリ
 - UI
