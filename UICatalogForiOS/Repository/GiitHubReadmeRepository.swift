@@ -27,7 +27,7 @@ extension GitHubReadmeRepository {
         AlamofireAPIClient.shared.sendRequest(request) { result in
             switch result {
             case .success(let response):
-                completion(.success(resonse))
+                completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
             }

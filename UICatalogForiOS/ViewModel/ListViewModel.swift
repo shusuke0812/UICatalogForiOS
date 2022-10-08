@@ -42,7 +42,7 @@ enum ListRowType: String {
     case imageViewerOnTableView = "ImageViewer(on TableView)"
     case hud                    = "PKHUD"
     case alamofire              = "Alamofire"
-    case toast                   = "Toast"
+    case toast                  = "Toast"
 }
 
 class ListViewModel: NSObject {
