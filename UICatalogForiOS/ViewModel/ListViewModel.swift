@@ -9,17 +9,13 @@
 import UIKit
 
 ///　セクション
-enum ListSectionType {
-    /// UI
+enum ListSection {
     case ui
-    /// 写真
     case image
-    /// インタラクション
     case interaction
-    /// ネットワーク
     case networking
     
-    internal var rows: [ListRowType] {
+    internal var rows: [ListRow] {
         switch self {
         case .ui:
             return [.mxparallax, .xlpager]
@@ -34,7 +30,7 @@ enum ListSectionType {
 }
 
 /// 各セクションのセル
-enum ListRowType: String {
+enum ListRow: String {
     case mxparallax             = "MXParallaxHeaderAndTabman"
     case xlpager                = "XLPagerTabStrip"
     case tocrop                 = "TOCropViewController"
@@ -46,17 +42,17 @@ enum ListRowType: String {
 }
 
 class ListViewModel: NSObject {
-    var sections: [ListSectionType] = []
+    var sections: [ListSection] = []
 
     override init() {
         super.init()
         self.setSections()
     }
     
-    private func listViewCellFactory(sectionType: ListSectionType, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ListViewCell {
+    private func listViewCellFactory(section: ListSection, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> ListViewCell {
         let cell: ListViewCell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
-        let rowType: ListRowType = sectionType.rows[indexPath.row]
-        cell.titleLabel.text = rowType.rawValue
+        let row: ListRow = section.rows[indexPath.row]
+        cell.titleLabel.text = row.rawValue
         return cell
     }
 }
@@ -75,7 +71,7 @@ extension ListViewModel: UITableViewDataSource {
         return self.sections[section].rows.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionType: ListSectionType = self.sections[indexPath.section]
-        return listViewCellFactory(sectionType: sectionType, tableView: tableView, cellForRowAt: indexPath)
+        let _section: ListSection = self.sections[indexPath.section]
+        return listViewCellFactory(section: _section, tableView: tableView, cellForRowAt: indexPath)
     }
 }

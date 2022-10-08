@@ -34,8 +34,8 @@ extension ListViewController {
 // MARK: - TableView Delegate Methop
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let sectionType: ListSectionType = self.viewModel.sections[indexPath.section]
-        switch  sectionType {
+        let section: ListSection = self.viewModel.sections[indexPath.section]
+        switch  section {
         case .ui:
             return 50
         case .image:
@@ -50,8 +50,8 @@ extension ListViewController: UITableViewDelegate {
         // セルの選択を解除
         self.baseView.tableView.deselectRow(at: indexPath, animated: true)
         // セル選択後の処理
-        let sectionRowType: ListRowType = self.viewModel.sections[indexPath.section].rows[indexPath.row]
-        switch sectionRowType {
+        let sectionRow: ListRow = self.viewModel.sections[indexPath.section].rows[indexPath.row]
+        switch sectionRow {
         case .mxparallax:
             print("DEBUG： mxparallaxがタップされました")
         case .xlpager:
