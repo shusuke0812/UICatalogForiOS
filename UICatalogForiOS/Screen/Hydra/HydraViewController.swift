@@ -22,7 +22,8 @@ class HydraViewController: UIViewController {
         //runAlways()
         //runValidate()
         //runTimeout()
-        runAll()
+        //runAll()
+        runAny()
     }
     
     private func initialize() {
@@ -117,7 +118,7 @@ extension HydraViewController {
     
     // MARK: - All
     
-    private func allSample1() -> Promise<Int> {
+    private func sample1() -> Promise<Int> {
         return Promise<Int>(in: .background, { resolve, reject, _ in
             let value = Int.random(in: 0..<2)
             if value > 0 {
@@ -128,7 +129,7 @@ extension HydraViewController {
         })
     }
 
-    private func allSample2() -> Promise<Int> {
+    private func sample2() -> Promise<Int> {
         return Promise<Int>(in: .background, { resolve, reject, _ in
             let value = Int.random(in: 0..<2)
             if value > 0 {
@@ -142,11 +143,24 @@ extension HydraViewController {
     private func runAll() {
         // allの引数で設定したPromiseの戻り値が全てresolveの時にthenが呼ばれる. allの引数のPromiseは並列で実行される.
         // ✨ 所感：１つの結果を得るために複数のAPIを呼ぶ必要がある場合のハンドリングに使えそう
-        all([allSample1(), allSample2()]).then { [weak self] results in
+        all([sample1(), sample2()]).then { [weak self] results in
             print("then")
             self?.configResultLabel("then: \(results)")
         }.catch { [weak self] error in
             print("catch: \(error)")
+            self?.configResultLabel("catch: \(error)")
+        }
+    }
+    
+    // MARK: - Any
+    
+    private func runAny() {
+        // anyの引数で設定したPromiseの戻り値が一番速いものでthen/catchを処理. anyの引数のPromiseは並列で実行される.
+        any(sample1(), sample2()).then { [weak self] result in
+            debugPrint("then: \(result)")
+            self?.configResultLabel("then: \(result)")
+        }.catch { [weak self] error in
+            debugPrint("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
         }
     }
