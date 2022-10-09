@@ -19,7 +19,8 @@ class HydraViewController: UIViewController {
     }
     // MARK: Action
     @IBAction private func promiseRun(_ sender: UIButton) {
-        runAlways()
+        //runAlways()
+        runValidate()
     }
     
     private func initialize() {
@@ -63,6 +64,27 @@ extension HydraViewController {
             // Promiseの結果が resole でも reject でも最後に必ず呼ばれる
             debugPrint("always")
             self?.configResultLabel("always")
+        }
+    }
+    
+    // MARK: validate
+    private func validateSample() -> Promise<Int> {
+        return Promise<Int>(in: .background, { resolve, _, _ in
+            resolve(Int.random(in: 0..<2))
+        })
+    }
+    private func runValidate() {
+        validateSample().validate { result in
+            guard result == 1 else {
+                return false
+            }
+            return true
+        }.then { [weak self] _ in
+            debugPrint("then")
+            self?.configResultLabel("then")
+        }.catch { [weak self] error in
+            debugPrint("catch: \(error)")
+            self?.configResultLabel("catch: \(error)")
         }
     }
 }
