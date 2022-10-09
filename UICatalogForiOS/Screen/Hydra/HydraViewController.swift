@@ -25,7 +25,8 @@ class HydraViewController: UIViewController {
         //runAll()
         //runAny()
         //runPass()
-        runRecover()
+        //runRecover()
+        runMap()
     }
     
     private func initialize() {
@@ -210,6 +211,30 @@ extension HydraViewController {
         }.then { [weak self] in
             debugPrint("then")
             self?.configResultLabel("then")
+        }.catch { [weak self] error in
+            debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error)")
+        }
+    }
+    
+    // MARK: - Map
+    
+    private func mapSample(value: Int) -> Promise<Int> {
+        return Promise<Int>(in: .background) { resolve, reject, _ in
+            let number = Int.random(in: 0..<11)
+            if number > 0 {
+                resolve(value * number)
+            } else {
+                reject(HydraError.default)
+            }
+        }
+    }
+    
+    private func runMap() {
+        // 配列の要素を引数にしてPromiseへ変換する. それらは並列に実行される.
+        all([1, 3, 5].map(mapSample)).then { [weak self] result in
+            debugPrint("then: \(result)")
+            self?.configResultLabel("then: \(result)")
         }.catch { [weak self] error in
             debugPrint("error: \(error)")
             self?.configResultLabel("error: \(error)")
