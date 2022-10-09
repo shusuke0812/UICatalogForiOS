@@ -23,7 +23,8 @@ class HydraViewController: UIViewController {
         //runValidate()
         //runTimeout()
         //runAll()
-        runAny()
+        //runAny()
+        runPass()
     }
     
     private func initialize() {
@@ -162,6 +163,33 @@ extension HydraViewController {
         }.catch { [weak self] error in
             debugPrint("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
+        }
+    }
+    
+    // MARK: - Pass
+    
+    private func passSample() -> Promise<Int> {
+        return Promise<Int>(in: .background, { resolve, _, _ in
+            resolve(Int.random(in: 0..<51))
+        })
+    }
+    
+    private func runPass() {
+        // Promiseの戻り値を確認して、結果を次に渡したりrejectしたりできる. validateとの違いは結果を次に渡せるか否か.
+        passSample().pass { result -> Promise<Int> in
+            return Promise<Int>(in: .background, { resolve, reject, _ in
+                if result % 2 == 0 {
+                    resolve(result)
+                } else {
+                    reject(HydraError.pass)
+                }
+            })
+        }.then { [weak self] result in
+            debugPrint("then: \(result)")
+            self?.configResultLabel("then: \(result)")
+        }.catch { [weak self] error in
+            debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error)")
         }
     }
 }

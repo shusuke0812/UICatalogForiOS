@@ -13,4 +13,5 @@ enum HydraError: Error {
     case `timeout`
     case error1
     case error2
+    case pass
 }
