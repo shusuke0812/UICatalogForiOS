@@ -8,10 +8,13 @@
 
 import UIKit
 import Hydra
+import simd
 
 class HydraViewController: UIViewController {
     @IBOutlet private weak var promiseRunButton: UIButton!
     @IBOutlet private weak var resultLabel: UILabel!
+    
+    private var retryCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,8 @@ class HydraViewController: UIViewController {
         //runRecover()
         //runMap()
         //runZip()
-        runDefer()
+        //runDefer()
+        runRetry()
     }
     
     private func initialize() {
@@ -288,6 +292,22 @@ extension HydraViewController {
         }.catch { [weak self] error in
             debugPrint("now=\(Date()), error: \(error)")
             self?.configResultLabel("error: \(error)")
+        }
+    }
+    
+    // MARK: - Retry
+    
+    private func runRetry() {
+        sample1().retry(3) { [weak self] (count, error) -> Bool in
+            debugPrint("retry: \(count), error: \(error)")
+            self?.retryCount = count
+            return count > 0
+        }.then { [weak self] _ in
+            debugPrint("then")
+            self?.configResultLabel("then, retry=\((self?.retryCount)!)")
+        }.catch { [weak self] error in
+            debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error), retry=\((self?.retryCount)!)")
         }
     }
 }
