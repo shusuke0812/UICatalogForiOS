@@ -10,7 +10,6 @@
 
 import UIKit
 import Hydra
-import simd
 
 class HydraViewController: UIViewController {
     @IBOutlet private weak var promiseRunButton: UIButton!
