@@ -26,7 +26,8 @@ class HydraViewController: UIViewController {
         //runAny()
         //runPass()
         //runRecover()
-        runMap()
+        //runMap()
+        runZip()
     }
     
     private func initialize() {
@@ -235,6 +236,41 @@ extension HydraViewController {
         all([1, 3, 5].map(mapSample)).then { [weak self] result in
             debugPrint("then: \(result)")
             self?.configResultLabel("then: \(result)")
+        }.catch { [weak self] error in
+            debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error)")
+        }
+    }
+    
+    // MARK: - Zip
+    
+    private func zipSample1() -> Promise<Bool> {
+        return Promise<Bool>(in: .background) { resolve, reject, _ in
+            let number = Int.random(in: 0..<5)
+            if number > 0 {
+                resolve(true)
+            } else {
+                reject(HydraError.error1)
+            }
+        }
+    }
+    
+    private func zipSample2() -> Promise<String> {
+        return Promise<String>(in: .background) { resolve, reject, _ in
+            let number = Int.random(in: 0..<2)
+            if number > 0 {
+                resolve(String(format: "%d", number))
+            } else {
+                reject(HydraError.error2)
+            }
+        }
+    }
+    
+    private func runZip() {
+        // Promiseの戻り値をタプルで返す. allとの違いは配列で返すかタプルで返すか.
+        zip(zipSample1(), zipSample2()).then { [weak self] (result1, result2) in
+            debugPrint("then: result1=\(result1), result2=\(result2)")
+            self?.configResultLabel("then: result1=\(result1), result2=\(result2)")
         }.catch { [weak self] error in
             debugPrint("error: \(error)")
             self?.configResultLabel("error: \(error)")
