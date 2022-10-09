@@ -16,9 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5T-2Q-d7A">
+                                <rect key="frame" x="16" y="426" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9PV-Gm-HIF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="promiseRun:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gzJ-yk-1CH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZq-tD-iKe">
+                                <rect key="frame" x="16" y="520" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pZq-tD-iKe" secondAttribute="trailing" constant="16" id="0Zc-Hj-nkE"/>
+                            <constraint firstItem="pZq-tD-iKe" firstAttribute="top" secondItem="F5T-2Q-d7A" secondAttribute="bottom" constant="50" id="62N-f5-TFo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F5T-2Q-d7A" secondAttribute="trailing" constant="16" id="7vs-4Z-Mzs"/>
+                            <constraint firstItem="F5T-2Q-d7A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="HfQ-at-XkF"/>
+                            <constraint firstItem="F5T-2Q-d7A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="R6i-RB-4Rl"/>
+                            <constraint firstItem="F5T-2Q-d7A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jkw-cf-SW5"/>
+                            <constraint firstItem="pZq-tD-iKe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="zee-W3-nCf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="promiseRunButton" destination="F5T-2Q-d7A" id="xUT-Jy-xT4"/>
+                        <outlet property="resultLabel" destination="pZq-tD-iKe" id="yog-H3-nRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
