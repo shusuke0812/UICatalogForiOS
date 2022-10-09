@@ -24,7 +24,8 @@ class HydraViewController: UIViewController {
         //runTimeout()
         //runAll()
         //runAny()
-        runPass()
+        //runPass()
+        runRecover()
     }
     
     private func initialize() {
@@ -187,6 +188,28 @@ extension HydraViewController {
         }.then { [weak self] result in
             debugPrint("then: \(result)")
             self?.configResultLabel("then: \(result)")
+        }.catch { [weak self] error in
+            debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error)")
+        }
+    }
+    
+    // MARK: - Recover
+    
+    private func recoverSample() -> Promise<Void> {
+        return Promise<Void>(in: .background, { resolve, reject, _ in
+            reject(HydraError.recover)
+        })
+    }
+    
+    private func runRecover() {
+        recoverSample().recover { [weak self] result in
+            // reject -> resolve に回復して実行
+            self?.configResultLabel("recover: \(result)")
+            return Promise(resolved: ())
+        }.then { [weak self] in
+            debugPrint("then")
+            self?.configResultLabel("then")
         }.catch { [weak self] error in
             debugPrint("error: \(error)")
             self?.configResultLabel("error: \(error)")
