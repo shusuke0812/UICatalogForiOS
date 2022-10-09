@@ -83,9 +83,11 @@ extension HydraViewController {
             }
             return true
         }.then { [weak self] _ in
+            // validate結果が`true`の時に実行
             debugPrint("then")
             self?.configResultLabel("then")
         }.catch { [weak self] error in
+            // validate結果が`false`の時に実行
             debugPrint("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
         }
