@@ -319,7 +319,7 @@ extension HydraViewController {
     private func cancelSample() -> Promise<Void> {
         return Promise<Void>(in: .background) { (resolve, reject, operation) in
             DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
-                if self.token.isCancelled {
+                if self.token.isCancelled { // 🔥 cancel判定. token.invalidate()とすると`isCancelled=true`となる.
                     debugPrint("cancelSample: cancel")
                     operation.cancel()
                 } else {
