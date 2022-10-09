@@ -10,4 +10,5 @@ import Foundation
 
 enum HydraError: Error {
     case `default`
+    case `timeout`
 }

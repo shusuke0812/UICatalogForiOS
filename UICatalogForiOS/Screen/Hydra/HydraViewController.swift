@@ -20,7 +20,8 @@ class HydraViewController: UIViewController {
     // MARK: Action
     @IBAction private func promiseRun(_ sender: UIButton) {
         //runAlways()
-        runValidate()
+        //runValidate()
+        runTimeout()
     }
     
     private func initialize() {
@@ -88,6 +89,26 @@ extension HydraViewController {
             self?.configResultLabel("then")
         }.catch { [weak self] error in
             // validate結果が`false`の時に実行
+            debugPrint("catch: \(error)")
+            self?.configResultLabel("catch: \(error)")
+        }
+    }
+    
+    // MARK: - Timeout
+    
+    private func timeoutSample() -> Promise<Void> {
+        return Promise<Void>(in: .background, { resolve, reject, _ in
+            resolve(())
+        }).defer(2) // resolveに2sかけるために擬似的に設定
+    }
+    
+    private func runTimeout() {
+        // 引数`timeout`で設定した値以内でPromiseが返って来ればthenが呼ばれる
+        // ✨ 所感：API responseが返ってこない時のハンドリングに使えそう（フォールバック処理etc）
+        timeoutSample().timeout(in: .background, timeout: 3, error: HydraError.timeout).then { [weak self] _ in
+            debugPrint("then")
+            self?.configResultLabel("then")
+        }.catch { [weak self] error in
             debugPrint("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
         }
