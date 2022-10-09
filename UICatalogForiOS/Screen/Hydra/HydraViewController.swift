@@ -145,10 +145,10 @@ extension HydraViewController {
         // allの引数で設定したPromiseの戻り値が全てresolveの時にthenが呼ばれる. allの引数のPromiseは並列で実行される.
         // ✨ 所感：１つの結果を得るために複数のAPIを呼ぶ必要がある場合のハンドリングに使えそう
         all([sample1(), sample2()]).then { [weak self] results in
-            print("then")
+            debugPrint("then")
             self?.configResultLabel("then: \(results)")
         }.catch { [weak self] error in
-            print("catch: \(error)")
+            debugPrint("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
         }
     }
