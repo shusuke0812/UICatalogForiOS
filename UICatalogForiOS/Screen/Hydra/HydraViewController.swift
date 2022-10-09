@@ -43,7 +43,9 @@ class HydraViewController: UIViewController {
 }
 
 extension HydraViewController {
-    // MARK: always
+    
+    // MARK: - Always
+
     private func alwaysSample() -> Promise<Void> {
         return Promise<Void>(in: .background, { resolve, reject, _ in
             if Int.random(in: 0..<2) == 0 {
@@ -67,7 +69,8 @@ extension HydraViewController {
         }
     }
     
-    // MARK: validate
+    // MARK: - Validate
+
     private func validateSample() -> Promise<Int> {
         return Promise<Int>(in: .background, { resolve, _, _ in
             resolve(Int.random(in: 0..<2))
