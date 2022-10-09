@@ -15,4 +15,5 @@ enum HydraError: Error {
     case error2
     case pass
     case recover
+    case cancel
 }

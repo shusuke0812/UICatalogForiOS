@@ -15,10 +15,12 @@ class HydraViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
     
     private var retryCount: Int = 0
+    private var token = InvalidationToken()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        runCancel()
     }
     // MARK: Action
     @IBAction private func promiseRun(_ sender: UIButton) {
@@ -32,7 +34,8 @@ class HydraViewController: UIViewController {
         //runMap()
         //runZip()
         //runDefer()
-        runRetry()
+        //runRetry()
+        token.invalidate()
     }
     
     private func initialize() {
@@ -308,6 +311,39 @@ extension HydraViewController {
         }.catch { [weak self] error in
             debugPrint("error: \(error)")
             self?.configResultLabel("error: \(error), retry=\((self?.retryCount)!)")
+        }
+    }
+    
+    // MARK: - Cancel
+    
+    private func cancelSample() -> Promise<Void> {
+        return Promise<Void>(in: .background) { (resolve, reject, operation) in
+            DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
+                if self.token.isCancelled {
+                    debugPrint("cancelSample: cancel")
+                    operation.cancel()
+                } else {
+                    debugPrint("cancelSample: not cancel")
+                    if Int.random(in: 0..<5) > 0 {
+                        resolve(())
+                    } else {
+                        reject(HydraError.cancel)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func runCancel() {
+        cancelSample().cancelled { [weak self] in
+            debugPrint("cancelled")
+            self?.configResultLabel("cancelled")
+        }.then { [weak self] in
+            debugPrint("then")
+            self?.configResultLabel("then")
+        }.catch { [weak self] error in
+            debugPrint("catch: \(error)")
+            self?.configResultLabel("cathc: \(error)")
         }
     }
 }
