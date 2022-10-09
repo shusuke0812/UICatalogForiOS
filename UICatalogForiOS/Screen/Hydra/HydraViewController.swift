@@ -6,6 +6,8 @@
 //  Copyright © 2022 shusuke. All rights reserved.
 //
 
+// Ref: https://www.casleyconsulting.co.jp/blog/engineer/6068/ を参考に実装
+
 import UIKit
 import Hydra
 import simd
