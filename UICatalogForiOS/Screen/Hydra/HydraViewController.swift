@@ -27,7 +27,8 @@ class HydraViewController: UIViewController {
         //runPass()
         //runRecover()
         //runMap()
-        runZip()
+        //runZip()
+        runDefer()
     }
     
     private func initialize() {
@@ -273,6 +274,19 @@ extension HydraViewController {
             self?.configResultLabel("then: result1=\(result1), result2=\(result2)")
         }.catch { [weak self] error in
             debugPrint("error: \(error)")
+            self?.configResultLabel("error: \(error)")
+        }
+    }
+    
+    // MARK: - Defer
+    
+    private func runDefer() {
+        debugPrint("now=\(Date())")
+        sample1().defer(5).then { [weak self] result in
+            debugPrint("now=\(Date()), then: \(result)")
+            self?.configResultLabel("then: \(result)")
+        }.catch { [weak self] error in
+            debugPrint("now=\(Date()), error: \(error)")
             self?.configResultLabel("error: \(error)")
         }
     }
