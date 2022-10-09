@@ -21,7 +21,8 @@ class HydraViewController: UIViewController {
     @IBAction private func promiseRun(_ sender: UIButton) {
         //runAlways()
         //runValidate()
-        runTimeout()
+        //runTimeout()
+        runAll()
     }
     
     private func initialize() {
@@ -110,6 +111,42 @@ extension HydraViewController {
             self?.configResultLabel("then")
         }.catch { [weak self] error in
             debugPrint("catch: \(error)")
+            self?.configResultLabel("catch: \(error)")
+        }
+    }
+    
+    // MARK: - All
+    
+    private func allSample1() -> Promise<Int> {
+        return Promise<Int>(in: .background, { resolve, reject, _ in
+            let value = Int.random(in: 0..<2)
+            if value > 0 {
+                resolve(value)
+            } else {
+                reject(HydraError.error1)
+            }
+        })
+    }
+
+    private func allSample2() -> Promise<Int> {
+        return Promise<Int>(in: .background, { resolve, reject, _ in
+            let value = Int.random(in: 0..<2)
+            if value > 0 {
+                resolve(value)
+            } else {
+                reject(HydraError.error2)
+            }
+        })
+    }
+    
+    private func runAll() {
+        // allの引数で設定したPromiseの戻り値が全てresolveの時にthenが呼ばれる
+        // ✨ 所感：１つの結果を得るために複数のAPIを呼ぶ必要がある場合のハンドリングに使えそう
+        all([allSample1(), allSample2()]).then { [weak self] results in
+            print("then")
+            self?.configResultLabel("then: \(results)")
+        }.catch { [weak self] error in
+            print("catch: \(error)")
             self?.configResultLabel("catch: \(error)")
         }
     }
