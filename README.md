@@ -17,7 +17,7 @@ iOSアプリ開発用のライブラリ集
   - ✅ トースト：[Toast-Swift](https://github.com/scalessec/Toast-Swift)
 - Networkng
   - API通信：[Alamofire](https://github.com/Alamofire/Alamofire)
-- 非同期処理
-  - Promise: [Hydra](https://github.com/malcommac/Hydra)
+- 非同期処理s
+  - ✅ Promise: [Hydra](https://github.com/malcommac/Hydra)
 - その他
   - DI：[Swinject](https://github.com/Swinject/Swinject)
