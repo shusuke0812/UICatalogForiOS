@@ -53,13 +53,13 @@ extension HydraViewController {
     // MARK: - Always
 
     private func alwaysSample() -> Promise<Void> {
-        return Promise<Void>(in: .background, { resolve, reject, _ in
+        return Promise<Void>(in: .background) { resolve, reject, _ in
             if Int.random(in: 0..<2) == 0 {
                 resolve(())
             } else {
                 reject(HydraError.default)
             }
-        })
+        }
     }
     private func runAlways() {
         alwaysSample().then { [weak self] _ in
@@ -78,9 +78,9 @@ extension HydraViewController {
     // MARK: - Validate
 
     private func validateSample() -> Promise<Int> {
-        return Promise<Int>(in: .background, { resolve, _, _ in
+        return Promise<Int>(in: .background) { resolve, _, _ in
             resolve(Int.random(in: 0..<2))
-        })
+        }
     }
     private func runValidate() {
         validateSample().validate { result in
@@ -102,9 +102,9 @@ extension HydraViewController {
     // MARK: - Timeout
     
     private func timeoutSample() -> Promise<Void> {
-        return Promise<Void>(in: .background, { resolve, reject, _ in
+        return Promise<Void>(in: .background) { resolve, reject, _ in
             resolve(())
-        }).defer(2) // resolveに2sかけるために擬似的に設定
+        }.defer(2) // resolveに2sかけるために擬似的に設定
     }
     
     private func runTimeout() {
@@ -122,25 +122,25 @@ extension HydraViewController {
     // MARK: - All
     
     private func sample1() -> Promise<Int> {
-        return Promise<Int>(in: .background, { resolve, reject, _ in
+        return Promise<Int>(in: .background) { resolve, reject, _ in
             let value = Int.random(in: 0..<2)
             if value > 0 {
                 resolve(value)
             } else {
                 reject(HydraError.error1)
             }
-        })
+        }
     }
 
     private func sample2() -> Promise<Int> {
-        return Promise<Int>(in: .background, { resolve, reject, _ in
+        return Promise<Int>(in: .background) { resolve, reject, _ in
             let value = Int.random(in: 0..<2)
             if value > 0 {
                 resolve(value)
             } else {
                 reject(HydraError.error2)
             }
-        })
+        }
     }
     
     private func runAll() {
@@ -171,21 +171,21 @@ extension HydraViewController {
     // MARK: - Pass
     
     private func passSample() -> Promise<Int> {
-        return Promise<Int>(in: .background, { resolve, _, _ in
+        return Promise<Int>(in: .background) { resolve, _, _ in
             resolve(Int.random(in: 0..<51))
-        })
+        }
     }
     
     private func runPass() {
         // Promiseの戻り値を確認して、結果を次に渡したりrejectしたりできる. validateとの違いは結果を次に渡せるか否か.
         passSample().pass { result -> Promise<Int> in
-            return Promise<Int>(in: .background, { resolve, reject, _ in
+            return Promise<Int>(in: .background) { resolve, reject, _ in
                 if result % 2 == 0 {
                     resolve(result)
                 } else {
                     reject(HydraError.pass)
                 }
-            })
+            }
         }.then { [weak self] result in
             debugPrint("then: \(result)")
             self?.configResultLabel("then: \(result)")
@@ -198,9 +198,9 @@ extension HydraViewController {
     // MARK: - Recover
     
     private func recoverSample() -> Promise<Void> {
-        return Promise<Void>(in: .background, { resolve, reject, _ in
+        return Promise<Void>(in: .background) { resolve, reject, _ in
             reject(HydraError.recover)
-        })
+        }
     }
     
     private func runRecover() {
