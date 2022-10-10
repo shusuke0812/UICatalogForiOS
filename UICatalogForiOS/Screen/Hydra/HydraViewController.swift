@@ -6,7 +6,8 @@
 //  Copyright © 2022 shusuke. All rights reserved.
 //
 
-// Ref: https://www.casleyconsulting.co.jp/blog/engineer/6068/ を参考に実装
+// Ref1: https://www.casleyconsulting.co.jp/blog/engineer/6068/ を参考に実装
+// Ref2: https://github.com/malcommac/Hydra#all-features （公式リポジトリ）
 
 import UIKit
 import Hydra
@@ -56,6 +57,8 @@ class HydraViewController: UIViewController {
             self.resultLabel.text = text
         }
     }
+    private func showLoadingIndicator() {}
+    private func hideLoadingIndicator() {}
 }
 
 extension HydraViewController {
@@ -72,6 +75,7 @@ extension HydraViewController {
         }
     }
     private func runAlways() {
+        showLoadingIndicator() // ✨ point
         alwaysSample().then { [weak self] _ in
             debugPrint("then")
             self?.configResultLabel("then")
@@ -82,6 +86,7 @@ extension HydraViewController {
             // Promiseの結果が resole でも reject でも最後に必ず呼ばれる
             debugPrint("always")
             self?.configResultLabel("always")
+            self?.hideLoadingIndicator() // ✨ point
         }
     }
     
